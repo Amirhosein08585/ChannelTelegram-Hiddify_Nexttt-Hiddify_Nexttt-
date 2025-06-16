@@ -1,0 +1,1726 @@
+{
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1/dns-query ",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "local",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "188.114.97.3",
+        "188.114.96.3",
+        "2a06:98c1:3120::3",
+        "2a06:98c1:3121::3",
+        "104.17.147.22",
+        "104.17.148.22",
+        "188.114.96.3",
+        "188.114.97.3",
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3"
+      ]
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 6450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🔄 LATEST-UPDATE 📅 MON-26-KHORDAD-1404 🕑 18:37 § 0",
+        "🤖 TELEGRAM-CHANNEL 🌟 ARTIFICIAL-INTELLIGENCE 🖥  @Hiddify_Nexttt  🧠 § 1",
+        "🛡 TELEGRAM-CHANNEL 🔐 MTPROTO-PROXY 🌍  @Hiddify_Nexttt  📡 § 2",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-185.221.196.34:57602 § 3",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-37.143.129.127:20031 § 4",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-77.91.103.73:443 § 5",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-95.217.158.231:8388 § 6",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-185.42.163.45:25108 § 7",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-37.143.129.230:989 § 8",
+        "🔒 TR-TCP-TLS  @Hiddify_Nexttt  FI-65.109.219.89:5060 § 9",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-65.109.191.202:443 § 10",
+        "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-65.109.158.210:600 § 11",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:8722 § 12",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:5969 § 13",
+        "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-157.180.95.180:2087 § 14",
+        "🔒 VL-GRPC-NONE  @Hiddify_Nexttt  FI-65.21.181.218:8880 § 15",
+        "🔒 VL-WS-NA  @Hiddify_Nexttt  FI-95.217.151.107:80 § 16",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1524 § 17",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-109.120.187.5:35745 § 18",
+        "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-65.109.202.219:2087 § 19",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-37.27.213.97:443 § 20",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1517 § 21",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:4928 § 22",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1521 § 23",
+        "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-157.180.41.190:1519 § 24",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:7722 § 25",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1429 § 26",
+        "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-109.172.54.5:600 § 27",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:3799 § 28",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-77.221.159.70:443 § 29",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:8249 § 30",
+        "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-157.180.67.165:443 § 31",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.196:5969 § 32",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-217.144.186.102:2053 § 33",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.182:5969 § 34",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-109.61.17.90:6587 § 35",
+        "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-37.27.220.198:2001 § 36",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:8247 § 37",
+        "🔒 VL-WS-NA  @Hiddify_Nexttt  FI-77.221.158.250:443 § 38",
+        "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-37.27.91.74:8080 § 39",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1522 § 40",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-2.56.173.227:443 § 41",
+        "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-157.180.82.171:2087 § 42",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-135.181.253.161:2061 § 43",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.197:5969 § 44",
+        "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-135.181.231.239:600 § 45",
+        "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-37.27.63.47:600 § 46",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-109.172.54.5:3993 § 47",
+        "🔒 VL-HTTPUPGRADE-TLS  @Hiddify_Nexttt  FI-94.142.138.73:443 § 48",
+        "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-157.180.41.190:1520 § 49",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-213.159.68.143:443 § 50",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.184:5969 § 51",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-77.221.159.79:2053 § 52",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:3789 § 53",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-135.181.44.110:443 § 54",
+        "🔒 VL-WS-NA  @Hiddify_Nexttt  FI-195.26.230.120:587 § 55",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-109.172.54.5:443 § 56",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.41.190:2172 § 57",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.41.190:3184 § 58",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.152.144:443 § 59",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-65.108.92.15:1010 § 60",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-5.22.212.180:443 § 61",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.33.218:8443 § 62",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.231.239:443 § 63",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-157.180.41.190:2434 § 64",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-65.109.158.210:443 § 65",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.64.31:54401 § 66",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-65.21.181.218:443 § 67",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-135.181.151.143:443 § 68",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.41.190:2182 § 69",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-150.241.96.55:2040 § 70",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.116.167:2053 § 71",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-37.27.87.4:8443 § 72",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-83.147.252.63:2040 § 73",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-157.180.40.162:443 § 74",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-37.27.63.47:443 § 75",
+        "👨🏻‍💻 DEVELOPED-BY Mr.BlackHat 📌 FOLLOW-CONTACT SYDSRSMRZ § 76"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🔄 LATEST-UPDATE 📅 MON-26-KHORDAD-1404 🕑 18:37 § 0",
+        "🤖 TELEGRAM-CHANNEL 🌟 ARTIFICIAL-INTELLIGENCE 🖥  @Hiddify_Nexttt  🧠 § 1",
+        "🛡 TELEGRAM-CHANNEL 🔐 MTPROTO-PROXY 🌍  @Hiddify_Nexttt  📡 § 2",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-185.221.196.34:57602 § 3",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-37.143.129.127:20031 § 4",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-77.91.103.73:443 § 5",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-95.217.158.231:8388 § 6",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-185.42.163.45:25108 § 7",
+        "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-37.143.129.230:989 § 8",
+        "🔒 TR-TCP-TLS  @Hiddify_Nexttt  FI-65.109.219.89:5060 § 9",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-65.109.191.202:443 § 10",
+        "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-65.109.158.210:600 § 11",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:8722 § 12",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:5969 § 13",
+        "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-157.180.95.180:2087 § 14",
+        "🔒 VL-GRPC-NONE  @Hiddify_Nexttt  FI-65.21.181.218:8880 § 15",
+        "🔒 VL-WS-NA  @Hiddify_Nexttt  FI-95.217.151.107:80 § 16",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1524 § 17",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-109.120.187.5:35745 § 18",
+        "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-65.109.202.219:2087 § 19",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-37.27.213.97:443 § 20",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1517 § 21",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:4928 § 22",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1521 § 23",
+        "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-157.180.41.190:1519 § 24",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:7722 § 25",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1429 § 26",
+        "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-109.172.54.5:600 § 27",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:3799 § 28",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-77.221.159.70:443 § 29",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:8249 § 30",
+        "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-157.180.67.165:443 § 31",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.196:5969 § 32",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-217.144.186.102:2053 § 33",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.182:5969 § 34",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-109.61.17.90:6587 § 35",
+        "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-37.27.220.198:2001 § 36",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:8247 § 37",
+        "🔒 VL-WS-NA  @Hiddify_Nexttt  FI-77.221.158.250:443 § 38",
+        "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-37.27.91.74:8080 § 39",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1522 § 40",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-2.56.173.227:443 § 41",
+        "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-157.180.82.171:2087 § 42",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-135.181.253.161:2061 § 43",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.197:5969 § 44",
+        "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-135.181.231.239:600 § 45",
+        "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-37.27.63.47:600 § 46",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-109.172.54.5:3993 § 47",
+        "🔒 VL-HTTPUPGRADE-TLS  @Hiddify_Nexttt  FI-94.142.138.73:443 § 48",
+        "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-157.180.41.190:1520 § 49",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-213.159.68.143:443 § 50",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.184:5969 § 51",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-77.221.159.79:2053 § 52",
+        "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:3789 § 53",
+        "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-135.181.44.110:443 § 54",
+        "🔒 VL-WS-NA  @Hiddify_Nexttt  FI-195.26.230.120:587 § 55",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-109.172.54.5:443 § 56",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.41.190:2172 § 57",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.41.190:3184 § 58",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.152.144:443 § 59",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-65.108.92.15:1010 § 60",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-5.22.212.180:443 § 61",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.33.218:8443 § 62",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.231.239:443 § 63",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-157.180.41.190:2434 § 64",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-65.109.158.210:443 § 65",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.64.31:54401 § 66",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-65.21.181.218:443 § 67",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-135.181.151.143:443 § 68",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.41.190:2182 § 69",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-150.241.96.55:2040 § 70",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.116.167:2053 § 71",
+        "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-37.27.87.4:8443 § 72",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-83.147.252.63:2040 § 73",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-157.180.40.162:443 § 74",
+        "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-37.27.63.47:443 § 75",
+        "👨🏻‍💻 DEVELOPED-BY Mr.BlackHat 📌 FOLLOW-CONTACT SYDSRSMRZ § 76"
+      ],
+      "url": "http://connectivitycheck.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
+    },
+    {
+      "type": "trojan",
+      "tag": "🔄 LATEST-UPDATE 📅 MON-26-KHORDAD-1404 🕑 18:37 § 0",
+      "server": "127.0.0.1",
+      "server_port": 1080,
+      "password": "baaccab-aabc-baca-dacb-acabcbcacabb",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🤖 TELEGRAM-CHANNEL 🌟 ARTIFICIAL-INTELLIGENCE 🖥  @Hiddify_Nexttt  🧠 § 1",
+      "server": "127.0.0.1",
+      "server_port": 2080,
+      "password": "bbcaaca-abac-abac-bdca-cccbbcaabaab",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🛡 TELEGRAM-CHANNEL 🔐 MTPROTO-PROXY 🌍  @Hiddify_Nexttt  📡 § 2",
+      "server": "127.0.0.1",
+      "server_port": 3080,
+      "password": "acbabac-aacb-caba-acbd-aaaccbcabbbc",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-185.221.196.34:57602 § 3",
+      "server": "185.221.196.34",
+      "server_port": 57602,
+      "method": "chacha20-ietf-poly1305",
+      "password": "YsMyc2KezH5LEuOkL3hIKD"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-37.143.129.127:20031 § 4",
+      "server": "37.143.129.127",
+      "server_port": 20031,
+      "method": "aes-256-gcm",
+      "password": "GCPN7N4AR86P8FYR"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-77.91.103.73:443 § 5",
+      "server": "77.91.103.73",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "Lcc1lw8IP2KI"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-95.217.158.231:8388 § 6",
+      "server": "95.217.158.231",
+      "server_port": 8388,
+      "method": "aes-256-cfb",
+      "password": "eath1eicieSh_!MMyb~4HT,}bC@ohpheiRaighier0shohd"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-185.42.163.45:25108 § 7",
+      "server": "185.42.163.45",
+      "server_port": 25108,
+      "method": "chacha20-ietf-poly1305",
+      "password": "1AU6NgupolqNdSJ0Dx1nk7"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🔒 SS-TCP-NA  @Hiddify_Nexttt  FI-37.143.129.230:989 § 8",
+      "server": "37.143.129.230",
+      "server_port": 989,
+      "method": "aes-256-cfb",
+      "password": "f8f7aCzcPKbsF8p3"
+    },
+    {
+      "type": "trojan",
+      "tag": "🔒 TR-TCP-TLS  @Hiddify_Nexttt  FI-65.109.219.89:5060 § 9",
+      "server": "65.109.219.89",
+      "server_port": 5060,
+      "password": "x c\u0001x",
+      "tls": {
+        "enabled": true,
+        "server_name": "sv1.ahsg.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-65.109.191.202:443 § 10",
+      "server": "65.109.191.202",
+      "server_port": 443,
+      "uuid": "fe069d77-882c-4175-b48e-c79e3fe65a81",
+      "tls": {
+        "enabled": true,
+        "server_name": "nextgenerationaiplatform.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fsafasfsafA",
+        "headers": {
+          "Host": "nextgenerationaiplatform.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-65.109.158.210:600 § 11",
+      "server": "65.109.158.210",
+      "server_port": 600,
+      "uuid": "a5f296f4-36f6-47ea-9e43-a8bd7367df5f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "subdomin.fisvn.ir",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:8722 § 12",
+      "server": "157.180.41.190",
+      "server_port": 8722,
+      "uuid": "e1f692a1-5f51-4baf-b403-77f367601463",
+      "transport": {
+        "type": "http",
+        "host": "varzesh3.com",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:5969 § 13",
+      "server": "157.180.41.190",
+      "server_port": 5969,
+      "uuid": "d5c4dadf-e1ab-47ff-b28e-62a0dc63f554",
+      "transport": {
+        "type": "http",
+        "host": "speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-157.180.95.180:2087 § 14",
+      "server": "157.180.95.180",
+      "server_port": 2087,
+      "uuid": "38b41ed4-5fe2-4868-8016-8df32dcaed78",
+      "tls": {
+        "enabled": true,
+        "server_name": "pic.zarashop0.ir",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-NONE  @Hiddify_Nexttt  FI-65.21.181.218:8880 § 15",
+      "server": "65.21.181.218",
+      "server_port": 8880,
+      "uuid": "e857b295-74da-4086-9f9a-cb107341bc2b",
+      "transport": {
+        "type": "grpc",
+        "service_name": "@cephalon_ai_bot",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-NA  @Hiddify_Nexttt  FI-95.217.151.107:80 § 16",
+      "server": "95.217.151.107",
+      "server_port": 80,
+      "uuid": "53fa8faf-ba4b-4322-9c69-a3e5b1555049",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram%F0%9F%87%A8%F0%9F%87%B3%20@WangCai2%20/",
+        "headers": {
+          "Host": "reedfree8mahsang2.redorg.ir"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1524 § 17",
+      "server": "157.180.41.190",
+      "server_port": 1524,
+      "uuid": "6730c92e-c7b4-42f4-9bcc-5d3cf36762e5",
+      "transport": {
+        "type": "http",
+        "host": "testspeed-foreign.tci.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-109.120.187.5:35745 § 18",
+      "server": "109.120.187.5",
+      "server_port": 35745,
+      "uuid": "7bc4a6ec-e65d-476b-83c0-ab79b72d4c91",
+      "transport": {
+        "type": "http",
+        "host": "nobitex.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-65.109.202.219:2087 § 19",
+      "server": "65.109.202.219",
+      "server_port": 2087,
+      "uuid": "d91894d8-c06b-44aa-b905-57ef6e9354aa",
+      "tls": {
+        "enabled": true,
+        "server_name": "xn--orafic-o58upgoa9wqa3x5l8j1nusxtyphrgojuwlyn.YAhVe111.COM",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ꄓoꄯrꅊaꅡfꅻiꆐcꆪꇍꇱꈍꄰꅋꈩꈿꉜꉭꉿ.YaHvE111.COM.",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-37.27.213.97:443 § 20",
+      "server": "37.27.213.97",
+      "server_port": 443,
+      "uuid": "8e944e35-e17b-4ecb-8879-f62a2c4cf546",
+      "tls": {
+        "enabled": true,
+        "server_name": "gift-4101664.FaraSorat.Net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/pV67LRFs428xHke56mDQ",
+        "headers": {
+          "Host": "Helsinki1.FaraSorat.net"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1517 § 21",
+      "server": "157.180.41.190",
+      "server_port": 1517,
+      "uuid": "fabdd668-900a-443f-bb38-d9df95c53f9d",
+      "transport": {
+        "type": "http",
+        "host": "testspeed-foreign.tci.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:4928 § 22",
+      "server": "157.180.41.190",
+      "server_port": 4928,
+      "uuid": "87b0c54e-11ae-4308-b927-8a065ef68288",
+      "transport": {
+        "type": "http",
+        "host": "speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1521 § 23",
+      "server": "157.180.41.190",
+      "server_port": 1521,
+      "uuid": "0791e547-9191-4981-8b38-3d490c2b41d5",
+      "transport": {
+        "type": "http",
+        "host": "testspeed-foreign.tci.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-157.180.41.190:1519 § 24",
+      "server": "157.180.41.190",
+      "server_port": 1519,
+      "uuid": "94b7bd2b-f373-4c5b-9892-5e16fde812bf",
+      "transport": {
+        "type": "http",
+        "host": "testspeed-foreign.tci.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:7722 § 25",
+      "server": "157.180.41.190",
+      "server_port": 7722,
+      "uuid": "e1f692a1-5f51-4baf-b403-77f367601463",
+      "transport": {
+        "type": "http",
+        "host": "varzesh3.com",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1429 § 26",
+      "server": "157.180.41.190",
+      "server_port": 1429,
+      "uuid": "0511ddb2-b684-43eb-93db-cb5476a463b8",
+      "transport": {
+        "type": "http",
+        "host": "speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-109.172.54.5:600 § 27",
+      "server": "109.172.54.5",
+      "server_port": 600,
+      "uuid": "bffceece-a818-45d2-ad04-eb819eec8f78",
+      "tls": {
+        "enabled": true,
+        "server_name": "marzban.negintel.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:3799 § 28",
+      "server": "157.180.41.190",
+      "server_port": 3799,
+      "uuid": "e1f692a1-5f51-4baf-b403-77f367601463",
+      "transport": {
+        "type": "http",
+        "host": "speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-77.221.159.70:443 § 29",
+      "server": "77.221.159.70",
+      "server_port": 443,
+      "uuid": "1a79d43f-b41c-496b-a241-dcbeefa81f0e",
+      "tls": {
+        "enabled": true,
+        "server_name": "0926.qiang2000.link",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "0926.qiang2000.link"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:8249 § 30",
+      "server": "157.180.41.190",
+      "server_port": 8249,
+      "uuid": "a775d1d5-e22d-abf5-51b5-3dd10a4bd942",
+      "transport": {
+        "type": "http",
+        "host": "testspeed-foreign.tci.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-157.180.67.165:443 § 31",
+      "server": "157.180.67.165",
+      "server_port": 443,
+      "uuid": "b30a6c95-554d-4635-b6ed-7cc429d19ee2",
+      "tls": {
+        "enabled": true,
+        "server_name": "shab.archerreal.ir",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.196:5969 § 32",
+      "server": "46.62.134.196",
+      "server_port": 5969,
+      "uuid": "d5c4dadf-e1ab-47ff-b28e-62a0dc63f554",
+      "transport": {
+        "type": "http",
+        "host": "speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-217.144.186.102:2053 § 33",
+      "server": "217.144.186.102",
+      "server_port": 2053,
+      "uuid": "1a79d43f-b41c-496b-a241-dcbeefa81f0e",
+      "tls": {
+        "enabled": true,
+        "server_name": "0926.qiang2000.link",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram@WangCai2/",
+        "headers": {
+          "Host": "0926.qiang2000.link"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.182:5969 § 34",
+      "server": "46.62.134.182",
+      "server_port": 5969,
+      "uuid": "d5c4dadf-e1ab-47ff-b28e-62a0dc63f554",
+      "transport": {
+        "type": "http",
+        "host": "speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-109.61.17.90:6587 § 35",
+      "server": "109.61.17.90",
+      "server_port": 6587,
+      "uuid": "a93bf8ef-0b48-4c49-95ff-03d20d211025",
+      "transport": {
+        "type": "http",
+        "host": "www.speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-37.27.220.198:2001 § 36",
+      "server": "37.27.220.198",
+      "server_port": 2001,
+      "uuid": "f4b81795-2e5a-4584-ea25-44bc16e8fc2c",
+      "transport": {
+        "type": "http",
+        "host": "www.speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:8247 § 37",
+      "server": "157.180.41.190",
+      "server_port": 8247,
+      "uuid": "b22d2e2a-2133-5dbb-b788-97f6d06e7f9e",
+      "transport": {
+        "type": "http",
+        "host": "testspeed-foreign.tci.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-NA  @Hiddify_Nexttt  FI-77.221.158.250:443 § 38",
+      "server": "77.221.158.250",
+      "server_port": 443,
+      "uuid": "1a79d43f-b41c-496b-a241-dcbeefa81f0e",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "0926.qiang2000.link"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-37.27.91.74:8080 § 39",
+      "server": "37.27.91.74",
+      "server_port": 8080,
+      "uuid": "879f1d7e-e845-48d9-9681-4f03c8a9f015",
+      "transport": {
+        "type": "http",
+        "host": "exo.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:1522 § 40",
+      "server": "157.180.41.190",
+      "server_port": 1522,
+      "uuid": "dfe11ec9-6330-4e75-bada-ba8796eb71df",
+      "transport": {
+        "type": "http",
+        "host": "testspeed-foreign.tci.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-2.56.173.227:443 § 41",
+      "server": "2.56.173.227",
+      "server_port": 443,
+      "uuid": "d99749f3-2e63-40f8-b461-5ca4d2ad952a",
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.demo98.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/wp-admin",
+        "headers": {
+          "Host": "blog.demo98.ir"
+        },
+        "max_early_data": 1024,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-TLS  @Hiddify_Nexttt  FI-157.180.82.171:2087 § 42",
+      "server": "157.180.82.171",
+      "server_port": 2087,
+      "uuid": "5d71b518-9f52-414a-abf2-b806684233be",
+      "tls": {
+        "enabled": true,
+        "server_name": "pic2.zarashop0.ir",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-135.181.253.161:2061 § 43",
+      "server": "135.181.253.161",
+      "server_port": 2061,
+      "uuid": "3961e4c4-c23a-46fa-845a-95438c6b0e99",
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.197:5969 § 44",
+      "server": "46.62.134.197",
+      "server_port": 5969,
+      "uuid": "d5c4dadf-e1ab-47ff-b28e-62a0dc63f554",
+      "transport": {
+        "type": "http",
+        "host": "speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-135.181.231.239:600 § 45",
+      "server": "135.181.231.239",
+      "server_port": 600,
+      "uuid": "a5f296f4-36f6-47ea-9e43-a8bd7367df5f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "subdomin.fisvn.ir",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-TLS  @Hiddify_Nexttt  FI-37.27.63.47:600 § 46",
+      "server": "37.27.63.47",
+      "server_port": 600,
+      "uuid": "a5f296f4-36f6-47ea-9e43-a8bd7367df5f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "subdomin.fisvn.ir",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-109.172.54.5:3993 § 47",
+      "server": "109.172.54.5",
+      "server_port": 3993,
+      "uuid": "b2e125db-f0a3-4ae4-b883-e5874897fe27",
+      "tls": {
+        "enabled": true,
+        "server_name": "marzban.negintel.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "max_early_data": 2084,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-HTTPUPGRADE-TLS  @Hiddify_Nexttt  FI-94.142.138.73:443 § 48",
+      "server": "94.142.138.73",
+      "server_port": 443,
+      "uuid": "840ef3bf-4247-4980-9dae-58895339ee11",
+      "tls": {
+        "enabled": true,
+        "server_name": "rebix.zone.id",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/products/",
+        "headers": {
+          "Host": "rebix.zone.id"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NA  @Hiddify_Nexttt  FI-157.180.41.190:1520 § 49",
+      "server": "157.180.41.190",
+      "server_port": 1520,
+      "uuid": "94b7bd2b-f373-4c5b-9892-5e16fde812bf",
+      "transport": {
+        "type": "http",
+        "host": "testspeed-foreign.tci.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-213.159.68.143:443 § 50",
+      "server": "213.159.68.143",
+      "server_port": 443,
+      "uuid": "d99749f3-2e63-40f8-b461-5ca4d2ad952a",
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.demo98.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/wp-admin",
+        "headers": {
+          "Host": "blog.demo98.ir"
+        },
+        "max_early_data": 1024,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-46.62.134.184:5969 § 51",
+      "server": "46.62.134.184",
+      "server_port": 5969,
+      "uuid": "d5c4dadf-e1ab-47ff-b28e-62a0dc63f554",
+      "transport": {
+        "type": "http",
+        "host": "speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-77.221.159.79:2053 § 52",
+      "server": "77.221.159.79",
+      "server_port": 2053,
+      "uuid": "f184c89c-80a4-4a3a-bc67-97db43266c11",
+      "tls": {
+        "enabled": true,
+        "server_name": "vdd.wxgqlfx.cn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/TG@wxgqlfx",
+        "headers": {
+          "Host": "vdd.wxgqlfx.cn"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-NONE  @Hiddify_Nexttt  FI-157.180.41.190:3789 § 53",
+      "server": "157.180.41.190",
+      "server_port": 3789,
+      "uuid": "87b0c54e-11ae-4308-b927-8a065ef68288",
+      "transport": {
+        "type": "http",
+        "host": "varzesh3.com",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-TLS  @Hiddify_Nexttt  FI-135.181.44.110:443 § 54",
+      "server": "135.181.44.110",
+      "server_port": 443,
+      "uuid": "345a9f16-9f70-4a9e-822d-70f632b6b722",
+      "tls": {
+        "enabled": true,
+        "server_name": "ghbi.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-WS-NA  @Hiddify_Nexttt  FI-195.26.230.120:587 § 55",
+      "server": "195.26.230.120",
+      "server_port": 587,
+      "uuid": "5543ae5c-c24f-405a-9266-597cbc43c818",
+      "transport": {
+        "type": "ws"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-109.172.54.5:443 § 56",
+      "server": "109.172.54.5",
+      "server_port": 443,
+      "uuid": "98a6bc60-f1e3-44c9-8cb6-c238b9e4dc02",
+      "tls": {
+        "enabled": true,
+        "server_name": "tgju.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tw6uAbjXzRSIKChb6pDbHVNjnU9Don4hbv6dHRkmJx8",
+          "short_id": "e54b5ad736ae4c38"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.41.190:2172 § 57",
+      "server": "157.180.41.190",
+      "server_port": 2172,
+      "uuid": "94b7bd2b-f373-4c5b-9892-5e16fde812bf",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.chess.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hLNxB1vjLv1XhgKvh99s9_0f6qHw50Mrf8B109Hd21I"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "chessgame",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.41.190:3184 § 58",
+      "server": "157.180.41.190",
+      "server_port": 3184,
+      "uuid": "87b0c54e-11ae-4308-b927-8a065ef68288",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.chess.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hLNxB1vjLv1XhgKvh99s9_0f6qHw50Mrf8B109Hd21I"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "chessgame",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.152.144:443 § 59",
+      "server": "135.181.152.144",
+      "server_port": 443,
+      "uuid": "f8bc4ba8-4af6-4f0a-8e68-2d736200203f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "debian.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3txs8T2vU1k1XIfa5T4sxkoNk9BmYN2Ce76gY2RwgFk"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-65.108.92.15:1010 § 60",
+      "server": "65.108.92.15",
+      "server_port": 1010,
+      "uuid": "d2d622b2-66d0-4a89-a02f-40885ee01409",
+      "tls": {
+        "enabled": true,
+        "server_name": "refersion.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FdMFSpgEwT0nhczf37d-Z8gFgJtwyV4C_pJlnOTScUA"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-5.22.212.180:443 § 61",
+      "server": "5.22.212.180",
+      "server_port": 443,
+      "uuid": "b88c900a-d179-422e-81c1-84c6e45ccc8d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.refersion.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cCsOIijb3G0Ogl9uIds1_cgjhZKGQSsOPojs4rR4JX0",
+          "short_id": "e869"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.33.218:8443 § 62",
+      "server": "135.181.33.218",
+      "server_port": 8443,
+      "uuid": "9af9dc5d-5849-4ca1-bcc0-a2a53091cb6c",
+      "tls": {
+        "enabled": true,
+        "server_name": "zula.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "8jNnXIMyO3_rYopLhsXqGiutnKIEmW8myaV5f1CzVEc",
+          "short_id": "55f711551c4e3248"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.231.239:443 § 63",
+      "server": "135.181.231.239",
+      "server_port": 443,
+      "uuid": "e725dc8e-930e-4039-8df6-b8f4c862d427",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tgju.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tw6uAbjXzRSIKChb6pDbHVNjnU9Don4hbv6dHRkmJx8",
+          "short_id": "e54b5ad736ae4c38"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-157.180.41.190:2434 § 64",
+      "server": "157.180.41.190",
+      "server_port": 2434,
+      "uuid": "0511ddb2-b684-43eb-93db-cb5476a463b8",
+      "tls": {
+        "enabled": true,
+        "server_name": "chess.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "yGgU4VVwpWk3sY54VgDxYVg77n5i-4jduHegq6PqPyA"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-65.109.158.210:443 § 65",
+      "server": "65.109.158.210",
+      "server_port": 443,
+      "uuid": "a5f296f4-36f6-47ea-9e43-a8bd7367df5f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tgju.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tw6uAbjXzRSIKChb6pDbHVNjnU9Don4hbv6dHRkmJx8",
+          "short_id": "e54b5ad736ae4c38"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-135.181.64.31:54401 § 66",
+      "server": "135.181.64.31",
+      "server_port": 54401,
+      "uuid": "eff09fb3-17f7-44ee-bc00-6fa5a3e0e9da",
+      "tls": {
+        "enabled": true,
+        "server_name": "zula.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "AqGO4WCsGfcX046DebowJcVTKANHPazld7XyAHD_RQE",
+          "short_id": "e5201e3c"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-65.21.181.218:443 § 67",
+      "server": "65.21.181.218",
+      "server_port": 443,
+      "uuid": "cdba56b7-82c5-449f-b5ef-86bf02c9797e",
+      "tls": {
+        "enabled": true,
+        "server_name": "stackoverflow.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "CpD2tuOBsn8rHQm8hSzErseno4fsHTdsdq58anDW3AI",
+          "short_id": "b81f1f0ca108"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "@cephalon\\_ai\\_bot",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-135.181.151.143:443 § 68",
+      "server": "135.181.151.143",
+      "server_port": 443,
+      "uuid": "4e4822a1-9db0-42ef-abdf-d87133425a5c",
+      "tls": {
+        "enabled": true,
+        "server_name": "serwus.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "K_ud1ATa-ff70uTk82NPWUxKSt5EL797ya-BJUPVwEg",
+          "short_id": "dcb98a49"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Channel---Telegram---ZED_VPN---ZED_VPN---Telegram---ZED_VPN---ZED_VPN---Telegram---ZED_VPN---ZED_VPN",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.41.190:2182 § 69",
+      "server": "157.180.41.190",
+      "server_port": 2182,
+      "uuid": "9519784a-f922-406d-aa66-d011d216b1c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.chess.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hLNxB1vjLv1XhgKvh99s9_0f6qHw50Mrf8B109Hd21I"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "chessgame",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-150.241.96.55:2040 § 70",
+      "server": "150.241.96.55",
+      "server_port": 2040,
+      "uuid": "10b59513-ef76-4494-a925-305ec45dd3a4",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs",
+          "short_id": "27cfa05000c23cc4"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-157.180.116.167:2053 § 71",
+      "server": "157.180.116.167",
+      "server_port": 2053,
+      "uuid": "9cb10076-f3e2-4b01-80d8-8317123c0349",
+      "tls": {
+        "enabled": true,
+        "server_name": "speedtest.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "OFmQboE5s4LVS9AjppK8o1b0t8Hh3JgdClB0HHCRURo",
+          "short_id": "6145fe820a20"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Tel:@VPN_KING_V2RAY",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-GRPC-RLT  @Hiddify_Nexttt  FI-37.27.87.4:8443 § 72",
+      "server": "37.27.87.4",
+      "server_port": 8443,
+      "uuid": "64ed48ac-8038-468b-8c62-b3e2ebfea4f2",
+      "tls": {
+        "enabled": true,
+        "server_name": "mhhauto.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "g4UhOBONKPJ6kAurhzGbGZBhALLyE39qH9uqBMiKzlc",
+          "short_id": "340fb683"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ZXZX",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-83.147.252.63:2040 § 73",
+      "server": "83.147.252.63",
+      "server_port": 2040,
+      "uuid": "10b59513-ef76-4494-a925-305ec45dd3a4",
+      "tls": {
+        "enabled": true,
+        "server_name": "fr.ign.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs",
+          "short_id": "27cfa05000c23cc4"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-157.180.40.162:443 § 74",
+      "server": "157.180.40.162",
+      "server_port": 443,
+      "uuid": "ae942900-cae6-425e-94b0-21f086e6d7b1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "__6BhtO3Rhjw4wnAmzklhquVvIngjhfnB8dhDVtj0Vs",
+          "short_id": "275f34"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "🔒 VL-TCP-RLT  @Hiddify_Nexttt  FI-37.27.63.47:443 § 75",
+      "server": "37.27.63.47",
+      "server_port": 443,
+      "uuid": "a5f296f4-36f6-47ea-9e43-a8bd7367df5f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tgju.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tw6uAbjXzRSIKChb6pDbHVNjnU9Don4hbv6dHRkmJx8",
+          "short_id": "e54b5ad736ae4c38"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "trojan",
+      "tag": "👨🏻‍💻 DEVELOPED-BY Mr.BlackHat 📌 FOLLOW-CONTACT SYDSRSMRZ § 76",
+      "server": "127.0.0.1",
+      "server_port": 8080,
+      "password": "cbabaac-acab-baca-acdb-babacbacabcc",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "1-500",
+        "sleep": "0-500"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "update_interval": "120h0m0s"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "secret": "t5W_H5MJRQtCTOQ5"
+    }
+  }
+}
