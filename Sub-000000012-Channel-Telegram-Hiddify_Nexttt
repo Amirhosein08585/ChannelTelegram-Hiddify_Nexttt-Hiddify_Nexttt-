@@ -1,0 +1,3183 @@
+{
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1/dns-query ",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "local",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "admin.c1.webramz.co",
+          "de.liangyuandian.top",
+          "de01a.kbservice.club",
+          "kr.mjt001.com",
+          "tgju.org",
+          "admin.c2.webramz.co",
+          "azure-sto.edgeservers.org",
+          "jp.liangyuandian.top",
+          "official.taipeicitygovernment.chernovtsy.ua",
+          "hk04.trojanyyds.xyz",
+          "ztcloudkr.ztcloud.xyz",
+          "series-a2-mec.varzesh360.co",
+          "usla.mjt000.com",
+          "freakconfig13.felafel.org",
+          "admin.c4.webramz.co",
+          "ap.liangyuandian.top",
+          "official.taipeicitygovernment.com.ua",
+          "us01.trojanyyds.xyz",
+          "official.taipeicitygovernment.if.ua",
+          "p231.panda004.net",
+          "official.taipeicitygovernment.cn.ua",
+          "www.speedtest.net",
+          "employ.bitiboot.com",
+          "a03.taipeicitygovernment.cn.ua",
+          "usa.liangyuandian.top",
+          "in01.trojanyyds.xyz",
+          "official.tokyometropolis.kherson.ua",
+          "series-a2.samanehha.co",
+          "admin.c3.webramz.co",
+          "p222.panda001.net",
+          "hk03.trojanyyds.xyz",
+          "series-a1.samanehha.co",
+          "official.seoulcitygovernment.com.ua",
+          "download2hkt.windowsupdate.lol",
+          "tw01.trojanyyds.xyz"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "188.114.97.3",
+        "188.114.96.3",
+        "2a06:98c1:3120::3",
+        "2a06:98c1:3121::3",
+        "104.17.147.22",
+        "104.17.148.22",
+        "188.114.96.3",
+        "188.114.97.3",
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3"
+      ]
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 6450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "000✅@Hiddify_Nexttt § 0",
+        "000✅-تلگرام ما را دنبال کنید § 1",
+        "000✅@Hiddify_Nexttt § 2",
+        "001 @Hiddify_Nexttt § 3",
+        "002 @Hiddify_Nexttt § 4",
+        "003 @Hiddify_Nexttt § 5",
+        "004 @Hiddify_Nexttt § 6",
+        "005 @Hiddify_Nexttt § 7",
+        "006 @Hiddify_Nexttt § 8",
+        "007 @Hiddify_Nexttt § 9",
+        "008 @Hiddify_Nexttt § 10",
+        "009 @Hiddify_Nexttt § 11",
+        "010 @Hiddify_Nexttt § 12",
+        "011 @Hiddify_Nexttt § 13",
+        "012 @Hiddify_Nexttt § 14",
+        "013 @Hiddify_Nexttt § 15",
+        "014 @Hiddify_Nexttt § 16",
+        "015 @Hiddify_Nexttt § 17",
+        "016 @Hiddify_Nexttt § 18",
+        "017 @Hiddify_Nexttt § 19",
+        "018 @Hiddify_Nexttt § 20",
+        "019 @Hiddify_Nexttt § 21",
+        "020 @Hiddify_Nexttt § 22",
+        "021 @Hiddify_Nexttt § 23",
+        "022 @Hiddify_Nexttt § 24",
+        "023 @Hiddify_Nexttt § 25",
+        "024 @Hiddify_Nexttt § 26",
+        "025 @Hiddify_Nexttt § 27",
+        "026 @Hiddify_Nexttt § 28",
+        "027 @Hiddify_Nexttt § 29",
+        "028 @Hiddify_Nexttt § 30",
+        "029 @Hiddify_Nexttt § 31",
+        "030 @Hiddify_Nexttt § 32",
+        "031 @Hiddify_Nexttt § 33",
+        "032 @Hiddify_Nexttt § 34",
+        "033 @Hiddify_Nexttt § 35",
+        "034 @Hiddify_Nexttt § 36",
+        "035 @Hiddify_Nexttt § 37",
+        "036 @Hiddify_Nexttt § 38",
+        "037 @Hiddify_Nexttt § 39",
+        "038 @Hiddify_Nexttt § 40",
+        "039 @Hiddify_Nexttt § 41",
+        "040 @Hiddify_Nexttt § 42",
+        "041 @Hiddify_Nexttt § 43",
+        "042 @Hiddify_Nexttt § 44",
+        "043 @Hiddify_Nexttt § 45",
+        "044 @Hiddify_Nexttt § 46",
+        "045 @Hiddify_Nexttt § 47",
+        "046 @Hiddify_Nexttt § 48",
+        "047 @Hiddify_Nexttt § 49",
+        "048 @Hiddify_Nexttt § 50",
+        "049 @Hiddify_Nexttt § 51",
+        "050 @Hiddify_Nexttt § 52",
+        "051 @Hiddify_Nexttt § 53",
+        "052 @Hiddify_Nexttt § 54",
+        "053 @Hiddify_Nexttt § 55",
+        "054 @Hiddify_Nexttt § 56",
+        "055 @Hiddify_Nexttt § 57",
+        "056 @Hiddify_Nexttt § 58",
+        "057 @Hiddify_Nexttt § 59",
+        "058 @Hiddify_Nexttt § 60",
+        "059 @Hiddify_Nexttt § 61",
+        "060 @Hiddify_Nexttt § 62",
+        "061 @Hiddify_Nexttt § 63",
+        "062 @Hiddify_Nexttt § 64",
+        "063 @Hiddify_Nexttt § 65",
+        "064 @Hiddify_Nexttt § 66",
+        "065 @Hiddify_Nexttt § 67",
+        "066 @Hiddify_Nexttt § 68",
+        "067 @Hiddify_Nexttt § 69",
+        "068 @Hiddify_Nexttt § 70",
+        "069 @Hiddify_Nexttt § 71",
+        "070 @Hiddify_Nexttt § 72",
+        "071 @Hiddify_Nexttt § 73",
+        "072 @Hiddify_Nexttt § 74",
+        "073 @Hiddify_Nexttt § 75",
+        "074 @Hiddify_Nexttt § 76",
+        "075 @Hiddify_Nexttt § 77",
+        "076 @Hiddify_Nexttt § 78",
+        "077 @Hiddify_Nexttt § 79",
+        "078 @Hiddify_Nexttt § 80",
+        "079 @Hiddify_Nexttt § 81",
+        "080 @Hiddify_Nexttt § 82",
+        "081 @Hiddify_Nexttt § 83",
+        "082 @Hiddify_Nexttt § 84",
+        "083 @Hiddify_Nexttt § 85",
+        "084 @Hiddify_Nexttt § 86",
+        "085 @Hiddify_Nexttt § 87",
+        "086 @Hiddify_Nexttt § 88",
+        "087 @Hiddify_Nexttt § 89",
+        "088 @Hiddify_Nexttt § 90",
+        "089 @Hiddify_Nexttt § 91",
+        "090 @Hiddify_Nexttt § 92",
+        "091 @Hiddify_Nexttt § 93",
+        "092 @Hiddify_Nexttt § 94",
+        "093 @Hiddify_Nexttt § 95",
+        "094 @Hiddify_Nexttt § 96",
+        "095 @Hiddify_Nexttt § 97",
+        "096 @Hiddify_Nexttt § 98",
+        "097 @Hiddify_Nexttt § 99",
+        "098 @Hiddify_Nexttt § 100",
+        "099 @Hiddify_Nexttt § 101",
+        "100 @Hiddify_Nexttt § 102",
+        "101 @Hiddify_Nexttt § 103",
+        "102 @Hiddify_Nexttt § 104",
+        "103 @Hiddify_Nexttt § 105",
+        "104 @Hiddify_Nexttt § 106",
+        "105 @Hiddify_Nexttt § 107",
+        "106 @Hiddify_Nexttt § 108",
+        "107 @Hiddify_Nexttt § 109",
+        "108 @Hiddify_Nexttt § 110",
+        "109 @Hiddify_Nexttt § 111",
+        "110 @Hiddify_Nexttt § 112",
+        "111 @Hiddify_Nexttt § 113",
+        "112 @Hiddify_Nexttt § 114",
+        "113 @Hiddify_Nexttt § 115",
+        "114 @Hiddify_Nexttt § 116",
+        "115 @Hiddify_Nexttt § 117",
+        "116 @Hiddify_Nexttt § 118",
+        "117 @Hiddify_Nexttt § 119",
+        "118 @Hiddify_Nexttt § 120",
+        "119 @Hiddify_Nexttt § 121",
+        "120 @Hiddify_Nexttt § 122",
+        "121 @Hiddify_Nexttt § 123",
+        "122 @Hiddify_Nexttt § 124",
+        "123 @Hiddify_Nexttt § 125",
+        "124 @Hiddify_Nexttt § 126",
+        "125 @Hiddify_Nexttt § 127",
+        "126 @Hiddify_Nexttt § 128",
+        "127 @Hiddify_Nexttt § 129",
+        "128 @Hiddify_Nexttt § 130",
+        "129 @Hiddify_Nexttt § 131",
+        "130 @Hiddify_Nexttt § 132",
+        "131 @Hiddify_Nexttt § 133",
+        "132 @Hiddify_Nexttt § 134",
+        "133 @Hiddify_Nexttt § 135",
+        "134 @Hiddify_Nexttt § 136",
+        "135 @Hiddify_Nexttt § 137",
+        "136 @Hiddify_Nexttt § 138",
+        "137 @Hiddify_Nexttt § 139",
+        "138 @Hiddify_Nexttt § 140",
+        "139 @Hiddify_Nexttt § 141",
+        "140 @Hiddify_Nexttt § 142",
+        "141 @Hiddify_Nexttt § 143",
+        "142 @Hiddify_Nexttt § 144",
+        "143 @Hiddify_Nexttt § 145",
+        "144 @Hiddify_Nexttt § 146",
+        "145 @Hiddify_Nexttt § 147",
+        "146 @Hiddify_Nexttt § 148",
+        "147 @Hiddify_Nexttt § 149",
+        "148 @Hiddify_Nexttt § 150",
+        "149 @Hiddify_Nexttt § 151",
+        "150 @Hiddify_Nexttt § 152",
+        "151 @Hiddify_Nexttt § 153",
+        "152 @Hiddify_Nexttt § 154",
+        "153 @Hiddify_Nexttt § 155",
+        "154 @Hiddify_Nexttt § 156",
+        "155 @Hiddify_Nexttt § 157",
+        "156 @Hiddify_Nexttt § 158",
+        "157 @Hiddify_Nexttt § 159",
+        "158 @Hiddify_Nexttt § 160",
+        "159 @Hiddify_Nexttt § 161",
+        "160 @Hiddify_Nexttt § 162",
+        "161 @Hiddify_Nexttt § 163",
+        "162 @Hiddify_Nexttt § 164",
+        "163 @Hiddify_Nexttt § 165",
+        "164 @Hiddify_Nexttt § 166",
+        "165 @Hiddify_Nexttt § 167",
+        "166 @Hiddify_Nexttt § 168",
+        "167 @Hiddify_Nexttt § 169",
+        "168 @Hiddify_Nexttt § 170",
+        "169 @Hiddify_Nexttt § 171",
+        "170 @Hiddify_Nexttt § 172",
+        "171 @Hiddify_Nexttt § 173",
+        "172 @Hiddify_Nexttt § 174",
+        "173 @Hiddify_Nexttt § 175",
+        "174 @Hiddify_Nexttt § 176",
+        "175 @Hiddify_Nexttt § 177",
+        "176 @Hiddify_Nexttt § 178",
+        "177 @Hiddify_Nexttt § 179",
+        "178 @Hiddify_Nexttt § 180"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "000✅@Hiddify_Nexttt § 0",
+        "000✅-تلگرام ما را دنبال کنید § 1",
+        "000✅@Hiddify_Nexttt § 2",
+        "001 @Hiddify_Nexttt § 3",
+        "002 @Hiddify_Nexttt § 4",
+        "003 @Hiddify_Nexttt § 5",
+        "004 @Hiddify_Nexttt § 6",
+        "005 @Hiddify_Nexttt § 7",
+        "006 @Hiddify_Nexttt § 8",
+        "007 @Hiddify_Nexttt § 9",
+        "008 @Hiddify_Nexttt § 10",
+        "009 @Hiddify_Nexttt § 11",
+        "010 @Hiddify_Nexttt § 12",
+        "011 @Hiddify_Nexttt § 13",
+        "012 @Hiddify_Nexttt § 14",
+        "013 @Hiddify_Nexttt § 15",
+        "014 @Hiddify_Nexttt § 16",
+        "015 @Hiddify_Nexttt § 17",
+        "016 @Hiddify_Nexttt § 18",
+        "017 @Hiddify_Nexttt § 19",
+        "018 @Hiddify_Nexttt § 20",
+        "019 @Hiddify_Nexttt § 21",
+        "020 @Hiddify_Nexttt § 22",
+        "021 @Hiddify_Nexttt § 23",
+        "022 @Hiddify_Nexttt § 24",
+        "023 @Hiddify_Nexttt § 25",
+        "024 @Hiddify_Nexttt § 26",
+        "025 @Hiddify_Nexttt § 27",
+        "026 @Hiddify_Nexttt § 28",
+        "027 @Hiddify_Nexttt § 29",
+        "028 @Hiddify_Nexttt § 30",
+        "029 @Hiddify_Nexttt § 31",
+        "030 @Hiddify_Nexttt § 32",
+        "031 @Hiddify_Nexttt § 33",
+        "032 @Hiddify_Nexttt § 34",
+        "033 @Hiddify_Nexttt § 35",
+        "034 @Hiddify_Nexttt § 36",
+        "035 @Hiddify_Nexttt § 37",
+        "036 @Hiddify_Nexttt § 38",
+        "037 @Hiddify_Nexttt § 39",
+        "038 @Hiddify_Nexttt § 40",
+        "039 @Hiddify_Nexttt § 41",
+        "040 @Hiddify_Nexttt § 42",
+        "041 @Hiddify_Nexttt § 43",
+        "042 @Hiddify_Nexttt § 44",
+        "043 @Hiddify_Nexttt § 45",
+        "044 @Hiddify_Nexttt § 46",
+        "045 @Hiddify_Nexttt § 47",
+        "046 @Hiddify_Nexttt § 48",
+        "047 @Hiddify_Nexttt § 49",
+        "048 @Hiddify_Nexttt § 50",
+        "049 @Hiddify_Nexttt § 51",
+        "050 @Hiddify_Nexttt § 52",
+        "051 @Hiddify_Nexttt § 53",
+        "052 @Hiddify_Nexttt § 54",
+        "053 @Hiddify_Nexttt § 55",
+        "054 @Hiddify_Nexttt § 56",
+        "055 @Hiddify_Nexttt § 57",
+        "056 @Hiddify_Nexttt § 58",
+        "057 @Hiddify_Nexttt § 59",
+        "058 @Hiddify_Nexttt § 60",
+        "059 @Hiddify_Nexttt § 61",
+        "060 @Hiddify_Nexttt § 62",
+        "061 @Hiddify_Nexttt § 63",
+        "062 @Hiddify_Nexttt § 64",
+        "063 @Hiddify_Nexttt § 65",
+        "064 @Hiddify_Nexttt § 66",
+        "065 @Hiddify_Nexttt § 67",
+        "066 @Hiddify_Nexttt § 68",
+        "067 @Hiddify_Nexttt § 69",
+        "068 @Hiddify_Nexttt § 70",
+        "069 @Hiddify_Nexttt § 71",
+        "070 @Hiddify_Nexttt § 72",
+        "071 @Hiddify_Nexttt § 73",
+        "072 @Hiddify_Nexttt § 74",
+        "073 @Hiddify_Nexttt § 75",
+        "074 @Hiddify_Nexttt § 76",
+        "075 @Hiddify_Nexttt § 77",
+        "076 @Hiddify_Nexttt § 78",
+        "077 @Hiddify_Nexttt § 79",
+        "078 @Hiddify_Nexttt § 80",
+        "079 @Hiddify_Nexttt § 81",
+        "080 @Hiddify_Nexttt § 82",
+        "081 @Hiddify_Nexttt § 83",
+        "082 @Hiddify_Nexttt § 84",
+        "083 @Hiddify_Nexttt § 85",
+        "084 @Hiddify_Nexttt § 86",
+        "085 @Hiddify_Nexttt § 87",
+        "086 @Hiddify_Nexttt § 88",
+        "087 @Hiddify_Nexttt § 89",
+        "088 @Hiddify_Nexttt § 90",
+        "089 @Hiddify_Nexttt § 91",
+        "090 @Hiddify_Nexttt § 92",
+        "091 @Hiddify_Nexttt § 93",
+        "092 @Hiddify_Nexttt § 94",
+        "093 @Hiddify_Nexttt § 95",
+        "094 @Hiddify_Nexttt § 96",
+        "095 @Hiddify_Nexttt § 97",
+        "096 @Hiddify_Nexttt § 98",
+        "097 @Hiddify_Nexttt § 99",
+        "098 @Hiddify_Nexttt § 100",
+        "099 @Hiddify_Nexttt § 101",
+        "100 @Hiddify_Nexttt § 102",
+        "101 @Hiddify_Nexttt § 103",
+        "102 @Hiddify_Nexttt § 104",
+        "103 @Hiddify_Nexttt § 105",
+        "104 @Hiddify_Nexttt § 106",
+        "105 @Hiddify_Nexttt § 107",
+        "106 @Hiddify_Nexttt § 108",
+        "107 @Hiddify_Nexttt § 109",
+        "108 @Hiddify_Nexttt § 110",
+        "109 @Hiddify_Nexttt § 111",
+        "110 @Hiddify_Nexttt § 112",
+        "111 @Hiddify_Nexttt § 113",
+        "112 @Hiddify_Nexttt § 114",
+        "113 @Hiddify_Nexttt § 115",
+        "114 @Hiddify_Nexttt § 116",
+        "115 @Hiddify_Nexttt § 117",
+        "116 @Hiddify_Nexttt § 118",
+        "117 @Hiddify_Nexttt § 119",
+        "118 @Hiddify_Nexttt § 120",
+        "119 @Hiddify_Nexttt § 121",
+        "120 @Hiddify_Nexttt § 122",
+        "121 @Hiddify_Nexttt § 123",
+        "122 @Hiddify_Nexttt § 124",
+        "123 @Hiddify_Nexttt § 125",
+        "124 @Hiddify_Nexttt § 126",
+        "125 @Hiddify_Nexttt § 127",
+        "126 @Hiddify_Nexttt § 128",
+        "127 @Hiddify_Nexttt § 129",
+        "128 @Hiddify_Nexttt § 130",
+        "129 @Hiddify_Nexttt § 131",
+        "130 @Hiddify_Nexttt § 132",
+        "131 @Hiddify_Nexttt § 133",
+        "132 @Hiddify_Nexttt § 134",
+        "133 @Hiddify_Nexttt § 135",
+        "134 @Hiddify_Nexttt § 136",
+        "135 @Hiddify_Nexttt § 137",
+        "136 @Hiddify_Nexttt § 138",
+        "137 @Hiddify_Nexttt § 139",
+        "138 @Hiddify_Nexttt § 140",
+        "139 @Hiddify_Nexttt § 141",
+        "140 @Hiddify_Nexttt § 142",
+        "141 @Hiddify_Nexttt § 143",
+        "142 @Hiddify_Nexttt § 144",
+        "143 @Hiddify_Nexttt § 145",
+        "144 @Hiddify_Nexttt § 146",
+        "145 @Hiddify_Nexttt § 147",
+        "146 @Hiddify_Nexttt § 148",
+        "147 @Hiddify_Nexttt § 149",
+        "148 @Hiddify_Nexttt § 150",
+        "149 @Hiddify_Nexttt § 151",
+        "150 @Hiddify_Nexttt § 152",
+        "151 @Hiddify_Nexttt § 153",
+        "152 @Hiddify_Nexttt § 154",
+        "153 @Hiddify_Nexttt § 155",
+        "154 @Hiddify_Nexttt § 156",
+        "155 @Hiddify_Nexttt § 157",
+        "156 @Hiddify_Nexttt § 158",
+        "157 @Hiddify_Nexttt § 159",
+        "158 @Hiddify_Nexttt § 160",
+        "159 @Hiddify_Nexttt § 161",
+        "160 @Hiddify_Nexttt § 162",
+        "161 @Hiddify_Nexttt § 163",
+        "162 @Hiddify_Nexttt § 164",
+        "163 @Hiddify_Nexttt § 165",
+        "164 @Hiddify_Nexttt § 166",
+        "165 @Hiddify_Nexttt § 167",
+        "166 @Hiddify_Nexttt § 168",
+        "167 @Hiddify_Nexttt § 169",
+        "168 @Hiddify_Nexttt § 170",
+        "169 @Hiddify_Nexttt § 171",
+        "170 @Hiddify_Nexttt § 172",
+        "171 @Hiddify_Nexttt § 173",
+        "172 @Hiddify_Nexttt § 174",
+        "173 @Hiddify_Nexttt § 175",
+        "174 @Hiddify_Nexttt § 176",
+        "175 @Hiddify_Nexttt § 177",
+        "176 @Hiddify_Nexttt § 178",
+        "177 @Hiddify_Nexttt § 179",
+        "178 @Hiddify_Nexttt § 180"
+      ],
+      "url": "http://connectivitycheck.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
+    },
+    {
+      "type": "vless",
+      "tag": "000✅@Hiddify_Nexttt § 0",
+      "server": "104.16.103.97",
+      "server_port": 80,
+      "uuid": "8c17092b-4d89-44e3-9dcb-a00c2bf28827",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "aymng.bahareh.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "000✅-تلگرام ما را دنبال کنید § 1",
+      "server": "104.16.103.97",
+      "server_port": 80,
+      "uuid": "8c17092b-4d89-44e3-9dcb-a00c2bf28827",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "aymng.bahareh.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "000✅@Hiddify_Nexttt § 2",
+      "server": "104.16.103.97",
+      "server_port": 80,
+      "uuid": "8c17092b-4d89-44e3-9dcb-a00c2bf28827",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "aymng.bahareh.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "001 @Hiddify_Nexttt § 3",
+      "server": "104.16.103.97",
+      "server_port": 80,
+      "uuid": "8c17092b-4d89-44e3-9dcb-a00c2bf28827",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "aymng.bahareh.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "002 @Hiddify_Nexttt § 4",
+      "server": "172.64.78.198",
+      "server_port": 80,
+      "uuid": "2370f4d8-6694-4e51-8c72-b2782ae96a59",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "withered-wave-ee0b-ppal03.faxip46069.workers.dev"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "003 @Hiddify_Nexttt § 5",
+      "server": "104.16.116.22",
+      "server_port": 80,
+      "uuid": "bf73e6e5-0336-40d5-995c-283de50646d2",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "divine-limit-e9df-ppal03.jorekon645.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "004 @Hiddify_Nexttt § 6",
+      "server": "172.67.92.147",
+      "server_port": 80,
+      "uuid": "b8be6118-0dd7-4402-ae1a-69b2816f3a7f",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "br.presskiwi.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "005 @Hiddify_Nexttt § 7",
+      "server": "141.101.121.108",
+      "server_port": 8080,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "1750293123492.china.baidu.bilibili.china.aeko.cn"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "006 @Hiddify_Nexttt § 8",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "53fa8faf-ba4b-4322-9c69-a3e5b1555049",
+      "transport": {
+        "type": "ws",
+        "path": "/%20Telegram@V2ray_Alpha/",
+        "headers": {
+          "Host": "redfree8mahsang6.redfree8.ir"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "007 @Hiddify_Nexttt § 9",
+      "server": "172.67.153.156",
+      "server_port": 8443,
+      "uuid": "57ba2ab1-a283-42eb-82ee-dc3561a805b8",
+      "tls": {
+        "enabled": true,
+        "server_name": "ovhwuxian.pai50288.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/57ba2ab1",
+        "headers": {
+          "Host": "ovhwuxian.pai50288.uk"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "008 @Hiddify_Nexttt § 10",
+      "server": "45.140.167.59",
+      "server_port": 8880,
+      "uuid": "df0680ca-e43c-498d-ed86-8e196eedd012",
+      "transport": {
+        "type": "grpc",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "009 @Hiddify_Nexttt § 11",
+      "server": "95.164.45.95",
+      "server_port": 8880,
+      "uuid": "df0680ca-e43c-498d-ed86-8e196eedd012",
+      "transport": {
+        "type": "grpc",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "010 @Hiddify_Nexttt § 12",
+      "server": "135.148.74.150",
+      "server_port": 443,
+      "uuid": "54694a33-a8dc-47dd-bc38-acd3971e0055",
+      "tls": {
+        "enabled": true,
+        "server_name": "147135004002.sec20org.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "011 @Hiddify_Nexttt § 13",
+      "server": "81.12.32.135",
+      "server_port": 32990,
+      "uuid": "a804bb53-7504-4f06-96d8-ff56fb71539d",
+      "transport": {
+        "type": "http",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "012 @Hiddify_Nexttt § 14",
+      "server": "tgju.org",
+      "server_port": 80,
+      "uuid": "76ad8213-4617-47eb-92cc-5392b39b45ce",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "eLOQuENt-caSE.ZUlaIR.orG."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "013 @Hiddify_Nexttt § 15",
+      "server": "20.189.104.97",
+      "server_port": 443,
+      "uuid": "6f995056-7802-4a1d-bff7-61678e626c3f",
+      "tls": {
+        "enabled": true,
+        "server_name": "dee33.azurewebsites.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "dee33.azurewebsites.net"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "014 @Hiddify_Nexttt § 16",
+      "server": "91.99.150.159",
+      "server_port": 4928,
+      "uuid": "90fda067-2e64-4dff-9a74-60417664d8b7",
+      "transport": {
+        "type": "http",
+        "host": "speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "015 @Hiddify_Nexttt § 17",
+      "server": "104.17.220.188",
+      "server_port": 80,
+      "uuid": "68b48eeb-5770-4eb3-9b77-deeb77a41ccf",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560/?JOKERRVPNBIA_CHANEL@JOKERRVPN",
+        "headers": {
+          "Host": "varzesh3.varzesh.dpdns.org"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "016 @Hiddify_Nexttt § 18",
+      "server": "104.16.52.232",
+      "server_port": 443,
+      "uuid": "4e4768df-0fbb-4cc1-8fd3-7c6fea95742a",
+      "tls": {
+        "enabled": true,
+        "server_name": "rayan-12.parastoo.dpdns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Rayan_Config",
+        "headers": {
+          "Host": "rayan-12.parastoo.dpdns.org"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "017 @Hiddify_Nexttt § 19",
+      "server": "104.21.16.1",
+      "server_port": 2087,
+      "uuid": "e5b9b393-bac0-4bea-ad96-53acc299e622",
+      "tls": {
+        "enabled": true,
+        "server_name": "SUPerCaRS.gobeXOR577.workErs.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/9cIedl69CKURumzI",
+        "headers": {
+          "Host": "supercars.gobexor577.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "018 @Hiddify_Nexttt § 20",
+      "server": "172.67.11.138",
+      "server_port": 80,
+      "uuid": "b55ec078-3b17-4ed1-a697-71f464cdcaaa",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "kssepa.sabzipolobamahi.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "019 @Hiddify_Nexttt § 21",
+      "server": "104.17.223.175",
+      "server_port": 80,
+      "uuid": "ebe2de6a-6caf-4d57-8275-dbdb3e62d94f",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "q1.19KalA.co"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "020 @Hiddify_Nexttt § 22",
+      "server": "104.16.137.145",
+      "server_port": 80,
+      "uuid": "cba0b35b-8943-4c70-a864-9f78145b7897",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "agolna.mahsaamini.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "021 @Hiddify_Nexttt § 23",
+      "server": "104.21.22.59",
+      "server_port": 2083,
+      "uuid": "832accbb-e9ca-4ae9-9f52-9aaafaa28e8a",
+      "tls": {
+        "enabled": true,
+        "server_name": "W-fm31c626b071M8ZAd1Z891U-Azf81b.VazifEdaNMOHAMmad8.woRkeRs.DEV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/pKooTP3e7T4X49qG",
+        "headers": {
+          "Host": "w-fm31c626b071m8zad1z891u-azf81b.vazifedanmohammad8.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "022 @Hiddify_Nexttt § 24",
+      "server": "www.speedtest.net",
+      "server_port": 2053,
+      "uuid": "e73c97ad-af2e-49e9-8321-5e217ca57124",
+      "tls": {
+        "enabled": true,
+        "server_name": "mAHsA.965871a.stORe",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/mM3VP46oYCTZgh56",
+        "headers": {
+          "Host": "mahsa.965871a.store"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "023 @Hiddify_Nexttt § 25",
+      "server": "193.176.243.102",
+      "server_port": 8080,
+      "uuid": "42586269-540d-49b2-a0c9-efb794ce06fe",
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "024 @Hiddify_Nexttt § 26",
+      "server": "104.17.210.171",
+      "server_port": 443,
+      "uuid": "c98a16e4-0dc5-42f0-b3db-30f04525c123",
+      "tls": {
+        "enabled": true,
+        "server_name": "vless10-9sc.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "vless10-9sc.pages.dev"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "025 @Hiddify_Nexttt § 27",
+      "server": "104.16.98.3",
+      "server_port": 2053,
+      "uuid": "c106802e-577e-4dfd-ab45-c65d88af1ef9",
+      "tls": {
+        "enabled": true,
+        "server_name": "0p9oj0annx3ywe408ctenbtw3mhacrc7.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/pBo4JI9ey63R7sN5?ed=2560/?Join_Bade_Channel@JOKERRVPN",
+        "headers": {
+          "Host": "0p9oj0annx3ywe408ctenbtw3mhacrc7.pages.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "026 @Hiddify_Nexttt § 28",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "ced20efa-802d-4589-a91f-26947496c81f",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "q3.19kala.co"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "027 @Hiddify_Nexttt § 29",
+      "server": "www.speedtest.net",
+      "server_port": 80,
+      "uuid": "ced20efa-802d-4589-a91f-26947496c81f",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "q3.19kala.co"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "028 @Hiddify_Nexttt § 30",
+      "server": "104.26.15.69",
+      "server_port": 443,
+      "uuid": "30f2d443-af46-4dd6-83c9-b5e17299ebd2",
+      "tls": {
+        "enabled": true,
+        "server_name": "carlotta.shoorekeeper.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=zani.yaemiko.ggff.net",
+        "headers": {
+          "Host": "carlotta.shoorekeeper.cloudns.org"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "029 @Hiddify_Nexttt § 31",
+      "server": "95.164.45.94",
+      "server_port": 8880,
+      "uuid": "df0680ca-e43c-498d-ed86-8e196eedd012",
+      "transport": {
+        "type": "grpc",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "030 @Hiddify_Nexttt § 32",
+      "server": "104.26.14.85",
+      "server_port": 8080,
+      "uuid": "0706a762-3fd5-4205-b5b9-42f746a3119f",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "WQ.R5Kt41PbPO.zuLAIR.orG."
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "031 @Hiddify_Nexttt § 33",
+      "server": "104.16.150.12",
+      "server_port": 80,
+      "uuid": "dfdf1c0a-5e52-4746-88bd-19d4e4ac7853",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "tannaz.juveitaly.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "032 @Hiddify_Nexttt § 34",
+      "server": "104.21.66.157",
+      "server_port": 443,
+      "uuid": "662e38ba-8427-4955-94aa-76f5347a0ce8",
+      "tls": {
+        "enabled": true,
+        "server_name": "eeEEEeR.666470.xYZ",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/6DuxYMYmrGrnGKRtF5UvWyyVQu",
+        "headers": {
+          "Host": "eeeeeer.666470.xyz"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "033 @Hiddify_Nexttt § 35",
+      "server": "172.67.73.163",
+      "server_port": 8080,
+      "uuid": "d26f473f-db91-45b2-8c7e-8f38d294b6b5",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "e2.Ion7FPGEJ8.zuLAIR.org."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "034 @Hiddify_Nexttt § 36",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "53fa8faf-ba4b-4322-9c69-a3e5b1555049",
+      "transport": {
+        "type": "ws",
+        "path": "/Join_Bade_Channel@JOKERRVPN",
+        "headers": {
+          "Host": "redfree8mahsang6.redfree8.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "035 @Hiddify_Nexttt § 37",
+      "server": "104.17.147.22",
+      "server_port": 80,
+      "uuid": "68b48eeb-5770-4eb3-9b77-deeb77a41ccf",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram@ShadowProxy66/",
+        "headers": {
+          "Host": "varzesh3.varzesh.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "036 @Hiddify_Nexttt § 38",
+      "server": "104.21.3.219",
+      "server_port": 8443,
+      "uuid": "57ba2ab1-a283-42eb-82ee-dc3561a805b8",
+      "tls": {
+        "enabled": true,
+        "server_name": "ovhwuxian.pai50288.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/57ba2ab1",
+        "headers": {
+          "Host": "ovhwuxian.pai50288.uk"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "037 @Hiddify_Nexttt § 39",
+      "server": "employ.bitiboot.com",
+      "server_port": 443,
+      "uuid": "bec44ac3-a662-4179-a9dd-2aa881706dde",
+      "tls": {
+        "enabled": true,
+        "server_name": "analytics.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Ajk0QudeMVQocN88OG14PpsxparFuRJlvqzXDlW-gyQ",
+          "short_id": "aba7bc9a"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "038 @Hiddify_Nexttt § 40",
+      "server": "157.245.151.98",
+      "server_port": 443,
+      "uuid": "eb9ac797-4a77-4f3f-bd60-0baa69b47e92",
+      "tls": {
+        "enabled": true,
+        "server_name": "epcgame.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/danuwa",
+        "headers": {
+          "Host": "opensignal.awsglobalaccelerator.online"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "039 @Hiddify_Nexttt § 41",
+      "server": "104.16.184.194",
+      "server_port": 443,
+      "uuid": "a1311ab3-0498-4cfd-b2c9-b5a4ba7d2999",
+      "tls": {
+        "enabled": true,
+        "server_name": "rapid-mountain-e6a9-ppal03.rahog30057.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1",
+        "headers": {
+          "Host": "rapid-mountain-e6a9-ppal03.rahog30057.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "040 @Hiddify_Nexttt § 42",
+      "server": "104.17.220.188",
+      "server_port": 80,
+      "uuid": "68b48eeb-5770-4eb3-9b77-deeb77a41ccf",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "varzesh3.varzesh.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "041 @Hiddify_Nexttt § 43",
+      "server": "104.21.4.209",
+      "server_port": 443,
+      "uuid": "e73c97ad-af2e-49e9-8321-5e217ca57124",
+      "tls": {
+        "enabled": true,
+        "server_name": "mAhSA.965871a.STORe",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/w4bXDN3lgsJPGeyt",
+        "headers": {
+          "Host": "mahsa.965871a.store"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "042 @Hiddify_Nexttt § 44",
+      "server": "104.24.177.129",
+      "server_port": 80,
+      "uuid": "eb19e160-51f8-40d3-966b-9fa5de336924",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "crimson-cell-5828-ppal03.febox45376.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "043 @Hiddify_Nexttt § 45",
+      "server": "104.16.203.166",
+      "server_port": 80,
+      "uuid": "592bac53-90ec-44b5-811b-01f6adf28f41",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn",
+        "headers": {
+          "Host": "wild-glade-236b-ppal03.xawego3471.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "044 @Hiddify_Nexttt § 46",
+      "server": "188.114.98.94",
+      "server_port": 8880,
+      "uuid": "89780139-39db-4ae9-adc5-00d9da4bb8b3",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "server123.amirjacksonpp.workers.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "045 @Hiddify_Nexttt § 47",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "53fa8faf-ba4b-4322-9c69-a3e5b1555049",
+      "transport": {
+        "type": "ws",
+        "path": "/Join_Bade_Channel@JOKERRVPN",
+        "headers": {
+          "Host": "redfree8mahsang6.redfree8.ir"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "046 @Hiddify_Nexttt § 48",
+      "server": "172.67.78.196",
+      "server_port": 80,
+      "uuid": "dfdf1c0a-5e52-4746-88bd-19d4e4ac7853",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "tannaz.juveitaly.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "047 @Hiddify_Nexttt § 49",
+      "server": "104.16.41.105",
+      "server_port": 443,
+      "uuid": "9dd24d01-2b7a-4bd8-8c76-129d6ca89b8c",
+      "tls": {
+        "enabled": true,
+        "server_name": "kawaiifreevpn-7ds.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "kawaiifreevpn-7ds.pages.dev"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "048 @Hiddify_Nexttt § 50",
+      "server": "104.26.13.8",
+      "server_port": 2052,
+      "uuid": "da08534a-bfca-4ac0-bd2a-2e3846bfcbc0",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "q7.19kalA.co"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "049 @Hiddify_Nexttt § 51",
+      "server": "81.12.35.242",
+      "server_port": 2096,
+      "uuid": "0d1cb112-006f-4eaa-89d1-15da714d12e1",
+      "transport": {
+        "type": "http",
+        "host": "gharar.ir",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "050 @Hiddify_Nexttt § 52",
+      "server": "104.21.65.31",
+      "server_port": 443,
+      "uuid": "0f7070cd-c91d-4532-a51f-56da4f0e94be",
+      "tls": {
+        "enabled": true,
+        "server_name": "SssXzAw.444652.XYZ",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/nSABZLQbEUSLppj7jCmY",
+        "headers": {
+          "Host": "sssxzaw.444652.xyz"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "051 @Hiddify_Nexttt § 53",
+      "server": "188.114.98.18",
+      "server_port": 80,
+      "uuid": "a43ecdaf-c1e9-44f6-bbd9-1c113cb7d48f",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "q6.19kalA.co"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "052 @Hiddify_Nexttt § 54",
+      "server": "45.38.42.220",
+      "server_port": 8443,
+      "uuid": "d80b9af5-5351-4d37-8ba5-c9a7fca650f6",
+      "transport": {
+        "type": "http",
+        "host": "www.speedtest.net",
+        "path": "/",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "053 @Hiddify_Nexttt § 55",
+      "server": "104.25.140.153",
+      "server_port": 443,
+      "uuid": "f9f52055-ff98-4f3c-baa4-869864503e1e",
+      "tls": {
+        "enabled": true,
+        "server_name": "BPB-pANEL-En-1O0.pAges.DEV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "BPB-pANEL-En-1O0.pAges.DEV"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "054 @Hiddify_Nexttt § 56",
+      "server": "104.26.14.85",
+      "server_port": 80,
+      "uuid": "76ad8213-4617-47eb-92cc-5392b39b45ce",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "eLOQuENt-caSE.ZUlaIR.orG."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "055 @Hiddify_Nexttt § 57",
+      "server": "104.24.138.64",
+      "server_port": 80,
+      "uuid": "5d8bc42a-d345-4bd3-a844-4b90afc44670",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "patient-shadow-baf1-ppal03.hohel98085.workers.dev"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "056 @Hiddify_Nexttt § 58",
+      "server": "104.16.108.84",
+      "server_port": 443,
+      "uuid": "a89357b8-a501-46bd-ac6d-c0f37f1fd0f5",
+      "tls": {
+        "enabled": true,
+        "server_name": "shutu.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "shutu.pages.dev"
+        }
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "057 @Hiddify_Nexttt § 59",
+      "server": "series-a1.samanehha.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "W74XFALLLuw6m5IA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "058 @Hiddify_Nexttt § 60",
+      "server": "45.87.175.178",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "059 @Hiddify_Nexttt § 61",
+      "server": "46.226.163.225",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "c40641c1f89e7acb"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "060 @Hiddify_Nexttt § 62",
+      "server": "freakconfig13.felafel.org",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "1xO2cqPazqjGfCfd"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "061 @Hiddify_Nexttt § 63",
+      "server": "167.172.95.249",
+      "server_port": 37202,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QzPfIk2Wb8zzxYrglUkylkOSVn7LU8msavPqrD7yMsY="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "062 @Hiddify_Nexttt § 64",
+      "server": "51.15.23.63",
+      "server_port": 989,
+      "method": "aes-256-cfb",
+      "password": "f8f7aCzcPKbsF8p3"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "063 @Hiddify_Nexttt § 65",
+      "server": "45.158.171.132",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "064 @Hiddify_Nexttt § 66",
+      "server": "45.87.175.157",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "065 @Hiddify_Nexttt § 67",
+      "server": "series-a2-mec.varzesh360.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "u17T3BvpYaaiuW2c"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "066 @Hiddify_Nexttt § 68",
+      "server": "series-a2.samanehha.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "mps3FwmDjLrWaOVg"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "067 @Hiddify_Nexttt § 69",
+      "server": "admin.c2.webramz.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WstuSnlu4ieA9M0L"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "068 @Hiddify_Nexttt § 70",
+      "server": "103.186.154.31",
+      "server_port": 38388,
+      "method": "aes-256-cfb",
+      "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "069 @Hiddify_Nexttt § 71",
+      "server": "171.22.254.17",
+      "server_port": 989,
+      "method": "aes-256-cfb",
+      "password": "f8f7aCzcPKbsF8p3"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "070 @Hiddify_Nexttt § 72",
+      "server": "azure-sto.edgeservers.org",
+      "server_port": 48172,
+      "method": "chacha20-ietf-poly1305",
+      "password": "51yloQC8D9w1Wae7FHtI65"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "071 @Hiddify_Nexttt § 73",
+      "server": "45.87.175.199",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "072 @Hiddify_Nexttt § 74",
+      "server": "74.177.141.237",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "VWsBymdCxQI9Qk8m"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "073 @Hiddify_Nexttt § 75",
+      "server": "45.87.175.28",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "074 @Hiddify_Nexttt § 76",
+      "server": "admin.c1.webramz.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "1xO2cqPazqjGfCfd"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "075 @Hiddify_Nexttt § 77",
+      "server": "157.180.127.73",
+      "server_port": 17592,
+      "method": "chacha20-ietf-poly1305",
+      "password": "C/6MNvg43zEdnmj6zK5MArALTfzhETRD3NzLNT+IL98="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "076 @Hiddify_Nexttt § 78",
+      "server": "166.1.157.228",
+      "server_port": 55330,
+      "method": "chacha20-ietf-poly1305",
+      "password": "frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "077 @Hiddify_Nexttt § 79",
+      "server": "series-a2-mec.varzesh360.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "u17T3BvpYaaiuW2c"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "078 @Hiddify_Nexttt § 80",
+      "server": "admin.c4.webramz.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "69MUii7VDwMqh7Hz"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "079 @Hiddify_Nexttt § 81",
+      "server": "admin.c2.webramz.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WstuSnlu4ieA9M0L"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "080 @Hiddify_Nexttt § 82",
+      "server": "series-a1.samanehha.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "W74XFALLLuw6m5IA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "081 @Hiddify_Nexttt § 83",
+      "server": "45.87.175.178",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "082 @Hiddify_Nexttt § 84",
+      "server": "74.177.240.157",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WstuSnlu4ieA9M0L"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "083 @Hiddify_Nexttt § 85",
+      "server": "45.87.175.199",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4a2rfixophdjffa8KVA4Aa"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "084 @Hiddify_Nexttt § 86",
+      "server": "157.180.127.73",
+      "server_port": 23819,
+      "method": "chacha20-ietf-poly1305",
+      "password": "C/6MNvg43zEdnmj6zK5MArALTfzhETRD3NzLNT+IL98="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "085 @Hiddify_Nexttt § 87",
+      "server": "45.87.175.157",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "086 @Hiddify_Nexttt § 88",
+      "server": "45.87.175.171",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "087 @Hiddify_Nexttt § 89",
+      "server": "20.91.252.21",
+      "server_port": 48172,
+      "method": "chacha20-ietf-poly1305",
+      "password": "51yloQC8D9w1Wae7FHtI65"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "088 @Hiddify_Nexttt § 90",
+      "server": "104.167.197.25",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "360e21d21977dc11"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "089 @Hiddify_Nexttt § 91",
+      "server": "45.87.175.199",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "090 @Hiddify_Nexttt § 92",
+      "server": "167.172.95.249",
+      "server_port": 37202,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QzPfIk2Wb8zzxYrglUkylkOSVn7LU8msavPqrD7yMsY="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "091 @Hiddify_Nexttt § 93",
+      "server": "85.210.120.237",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "Bog0ELmMM9DSxDdQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "092 @Hiddify_Nexttt § 94",
+      "server": "185.189.160.98",
+      "server_port": 64759,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "093 @Hiddify_Nexttt § 95",
+      "server": "4.223.100.248",
+      "server_port": 48172,
+      "method": "chacha20-ietf-poly1305",
+      "password": "51yloQC8D9w1Wae7FHtI65"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "094 @Hiddify_Nexttt § 96",
+      "server": "45.87.175.157",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "095 @Hiddify_Nexttt § 97",
+      "server": "74.177.141.93",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "1xO2cqPazqjGfCfd"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "096 @Hiddify_Nexttt § 98",
+      "server": "admin.c3.webramz.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "Bog0ELmMM9DSxDdQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "097 @Hiddify_Nexttt § 99",
+      "server": "51.15.23.63",
+      "server_port": 989,
+      "method": "aes-256-cfb",
+      "password": "f8f7aCzcPKbsF8p3"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "098 @Hiddify_Nexttt § 100",
+      "server": "221.150.109.89",
+      "server_port": 11389,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "099 @Hiddify_Nexttt § 101",
+      "server": "157.180.127.73",
+      "server_port": 23819,
+      "method": "chacha20-ietf-poly1305",
+      "password": "C/6MNvg43zEdnmj6zK5MArALTfzhETRD3NzLNT+IL98="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "100 @Hiddify_Nexttt § 102",
+      "server": "45.87.175.58",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "101 @Hiddify_Nexttt § 103",
+      "server": "185.49.105.170",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "a7qmJCwiMc5yrVMUFwleDw"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "102 @Hiddify_Nexttt § 104",
+      "server": "45.87.175.35",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "103 @Hiddify_Nexttt § 105",
+      "server": "45.87.175.178",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4a2rfixophdjffa8KVA4Aa"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "104 @Hiddify_Nexttt § 106",
+      "server": "37.202.231.23",
+      "server_port": 444,
+      "method": "aes-128-gcm",
+      "password": "rI9ixqmZHHG4PBvUANYAGw"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "105 @Hiddify_Nexttt § 107",
+      "server": "103.186.154.37",
+      "server_port": 38388,
+      "method": "aes-256-cfb",
+      "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "106 @Hiddify_Nexttt § 108",
+      "server": "74.177.141.93",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "mps3FwmDjLrWaOVg"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "107 @Hiddify_Nexttt § 109",
+      "server": "p222.panda001.net",
+      "server_port": 15098,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "108 @Hiddify_Nexttt § 110",
+      "server": "admin.c4.webramz.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "69MUii7VDwMqh7Hz"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "109 @Hiddify_Nexttt § 111",
+      "server": "74.177.240.157",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "u17T3BvpYaaiuW2c"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "110 @Hiddify_Nexttt § 112",
+      "server": "p231.panda004.net",
+      "server_port": 11389,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "111 @Hiddify_Nexttt § 113",
+      "server": "103.186.154.38",
+      "server_port": 38388,
+      "method": "aes-256-cfb",
+      "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "112 @Hiddify_Nexttt § 114",
+      "server": "series-a2.samanehha.co",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "mps3FwmDjLrWaOVg"
+    },
+    {
+      "type": "trojan",
+      "tag": "113 @Hiddify_Nexttt § 115",
+      "server": "104.21.46.90",
+      "server_port": 443,
+      "password": "2f9b71f8-0ff1-4f49-a759-2d300b7c4c09",
+      "tls": {
+        "enabled": true,
+        "server_name": "IiiIUuUyyYyy.freEvpNaTM.dpdNS.orG",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/9wAaF67mglzN6jop7uR",
+        "headers": {
+          "Host": "iiiiuuuyyyyy.freevpnatm.dpdns.org"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "114 @Hiddify_Nexttt § 116",
+      "server": "104.248.18.1",
+      "server_port": 1935,
+      "password": "6gZh2JbfhQ",
+      "tls": {
+        "enabled": true,
+        "server_name": "x1-germany-digitalocean-v2.devefun.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "115 @Hiddify_Nexttt § 117",
+      "server": "ap.liangyuandian.top",
+      "server_port": 443,
+      "password": "51c44c4e-f8c2-4419-a52b-b4b7bd915078",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "116 @Hiddify_Nexttt § 118",
+      "server": "107.173.148.58",
+      "server_port": 64047,
+      "password": "ef23ddd0-14c5-39c2-9880-af55ce892363",
+      "tls": {
+        "enabled": true,
+        "server_name": "t18.qifei.app",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "117 @Hiddify_Nexttt § 119",
+      "server": "103.235.46.40",
+      "server_port": 443,
+      "password": "72d8e820-7926-4ce3-a87c-b6969f425c79",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "118 @Hiddify_Nexttt § 120",
+      "server": "104.21.7.241",
+      "server_port": 443,
+      "password": "your_password",
+      "tls": {
+        "enabled": true,
+        "server_name": "aws-ca-central-1.f1cflineb.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/f1rocket",
+        "headers": {
+          "Host": "aws-ca-central-1.f1cflineb.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "119 @Hiddify_Nexttt § 121",
+      "server": "104.21.64.1",
+      "server_port": 443,
+      "password": "e9b4bdbd-cc5b-4a90-9616-ea0f1092ec7c",
+      "tls": {
+        "enabled": true,
+        "server_name": "ttYUi.7777198.xYZ",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/s1XRkMWuneQkqtp5KKSues",
+        "headers": {
+          "Host": "ttyui.7777198.xyz"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "120 @Hiddify_Nexttt § 122",
+      "server": "104.21.88.37",
+      "server_port": 443,
+      "password": "a4291a2a-d62c-4eb9-ac7a-ac7355d1eda2",
+      "tls": {
+        "enabled": true,
+        "server_name": "XXcdVFghYUIOp.999165.xyZ",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/mFvK3LJyIAe8ydvnmRKWDa8",
+        "headers": {
+          "Host": "xxcdvfghyuiop.999165.xyz"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "121 @Hiddify_Nexttt § 123",
+      "server": "172.104.63.96",
+      "server_port": 443,
+      "password": "aa485bb6-493e-461a-a27d-caff3a10725e",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "122 @Hiddify_Nexttt § 124",
+      "server": "jp.liangyuandian.top",
+      "server_port": 443,
+      "password": "58dcd460-65df-47b1-b062-517df30bef29",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "123 @Hiddify_Nexttt § 125",
+      "server": "172.67.219.196",
+      "server_port": 443,
+      "password": "f108e0e2-5f12-42b6-9e67-1b2f073ffb2b",
+      "tls": {
+        "enabled": true,
+        "server_name": "CCcvfgt6.852224.dpdns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/CA5bMmr2JMum8sDKRwvFCJq",
+        "headers": {
+          "Host": "cccvfgt6.852224.dpdns.org"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "124 @Hiddify_Nexttt § 126",
+      "server": "20.210.234.145",
+      "server_port": 443,
+      "password": "7d0f1f83-0f2f-4b90-930e-de44ac233fef",
+      "tls": {
+        "enabled": true,
+        "server_name": "in.stablize.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "125 @Hiddify_Nexttt § 127",
+      "server": "a03.taipeicitygovernment.cn.ua",
+      "server_port": 3462,
+      "password": "6e1b9a65-884f-3aa9-9469-bf6ec0f08610",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "126 @Hiddify_Nexttt § 128",
+      "server": "172.66.46.221",
+      "server_port": 443,
+      "password": "juzi",
+      "tls": {
+        "enabled": true,
+        "server_name": "juzi8186-sr1.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "juzi8186-sr1.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "127 @Hiddify_Nexttt § 129",
+      "server": "104.21.80.1",
+      "server_port": 443,
+      "password": "7701ddf5-6a48-401b-a3ec-8af52b6deb48",
+      "tls": {
+        "enabled": true,
+        "server_name": "SsXcDFGty.99890604.XYZ",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/QRNs4ue90AX3hweBopuhWEbIX",
+        "headers": {
+          "Host": "ssxcdfgty.99890604.xyz"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "128 @Hiddify_Nexttt § 130",
+      "server": "official.seoulcitygovernment.com.ua",
+      "server_port": 8443,
+      "password": "96983eb4-c8f1-316e-ab00-500014ed3d8b",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "129 @Hiddify_Nexttt § 131",
+      "server": "172.67.205.22",
+      "server_port": 443,
+      "password": "e4cbe8b8-37db-4aaa-8469-b84f34c51ebc",
+      "tls": {
+        "enabled": true,
+        "server_name": "xsCdfVg.20220420.Pp.UA",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/dilyfCPEmLvYr5hYXD",
+        "headers": {
+          "Host": "xscdfvg.20220420.pp.ua"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "130 @Hiddify_Nexttt § 132",
+      "server": "official.taipeicitygovernment.cn.ua",
+      "server_port": 8443,
+      "password": "96983eb4-c8f1-316e-ab00-500014ed3d8b",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "131 @Hiddify_Nexttt § 133",
+      "server": "104.21.89.221",
+      "server_port": 443,
+      "password": "c7f423b7-ced8-43da-a9ae-e906cb4a222c",
+      "tls": {
+        "enabled": true,
+        "server_name": "DdDdddDDdF.999824.Xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/dwPcFaK3QxWRQTqot0LE",
+        "headers": {
+          "Host": "dddddddddf.999824.xyz"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "132 @Hiddify_Nexttt § 134",
+      "server": "ap.liangyuandian.top",
+      "server_port": 443,
+      "password": "18304160-03d4-4c55-95c1-586c0a5f3a0a",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "133 @Hiddify_Nexttt § 135",
+      "server": "official.taipeicitygovernment.chernovtsy.ua",
+      "server_port": 8443,
+      "password": "96983eb4-c8f1-316e-ab00-500014ed3d8b",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "134 @Hiddify_Nexttt § 136",
+      "server": "20.89.130.227",
+      "server_port": 443,
+      "password": "9995cc0e-2e9d-4c80-8c81-4fdbb6322a3a",
+      "tls": {
+        "enabled": true,
+        "server_name": "fscus.fscloud123456789.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "135 @Hiddify_Nexttt § 137",
+      "server": "official.taipeicitygovernment.cn.ua",
+      "server_port": 8443,
+      "password": "96983eb4-c8f1-316e-ab00-500014ed3d8b",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "136 @Hiddify_Nexttt § 138",
+      "server": "official.taipeicitygovernment.com.ua",
+      "server_port": 8443,
+      "password": "96983eb4-c8f1-316e-ab00-500014ed3d8b",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "137 @Hiddify_Nexttt § 139",
+      "server": "hk03.trojanyyds.xyz",
+      "server_port": 443,
+      "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "138 @Hiddify_Nexttt § 140",
+      "server": "168.138.185.234",
+      "server_port": 443,
+      "password": "bpb-trojan",
+      "tls": {
+        "enabled": true,
+        "server_name": "s...",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "139 @Hiddify_Nexttt § 141",
+      "server": "de.liangyuandian.top",
+      "server_port": 443,
+      "password": "176196e4-7cf7-4561-87a9-21a1b4e344be",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "140 @Hiddify_Nexttt § 142",
+      "server": "us01.trojanyyds.xyz",
+      "server_port": 443,
+      "password": "cd41b9d7-df15-46ad-a778-257b0851525a",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "141 @Hiddify_Nexttt § 143",
+      "server": "download2hkt.windowsupdate.lol",
+      "server_port": 443,
+      "password": "7778e684-f435-4166-bf9e-0256cb28bf10",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "142 @Hiddify_Nexttt § 144",
+      "server": "104.21.22.211",
+      "server_port": 443,
+      "password": "5a5d1112-4ae7-431f-bdde-0d008fb473dd",
+      "tls": {
+        "enabled": true,
+        "server_name": "90.tAIpEI108.dpDnS.orG",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/685uFbiRrgAsHzTP8d",
+        "headers": {
+          "Host": "90.taipei108.dpdns.org"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "143 @Hiddify_Nexttt § 145",
+      "server": "hk04.trojanyyds.xyz",
+      "server_port": 443,
+      "password": "331365d8-3ce5-484d-a226-33312bcc3217",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "144 @Hiddify_Nexttt § 146",
+      "server": "120.241.226.94",
+      "server_port": 3462,
+      "password": "6e1b9a65-884f-3aa9-9469-bf6ec0f08610",
+      "tls": {
+        "enabled": true,
+        "server_name": "45.32.28.232",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "145 @Hiddify_Nexttt § 147",
+      "server": "172.66.45.35",
+      "server_port": 443,
+      "password": "juzi",
+      "tls": {
+        "enabled": true,
+        "server_name": "juzi8186-sr1.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "juzi8186-sr1.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "146 @Hiddify_Nexttt § 148",
+      "server": "210.203.60.189",
+      "server_port": 443,
+      "password": "6e1b9a65-884f-3aa9-9469-bf6ec0f08610",
+      "tls": {
+        "enabled": true,
+        "server_name": "45.32.28.232",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "147 @Hiddify_Nexttt § 149",
+      "server": "203.210.16.78",
+      "server_port": 8443,
+      "password": "96983eb4-c8f1-316e-ab00-500014ed3d8b",
+      "tls": {
+        "enabled": true,
+        "server_name": "official.seoulcitygovernment.com.ua",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "148 @Hiddify_Nexttt § 150",
+      "server": "de01a.kbservice.club",
+      "server_port": 443,
+      "password": "6e1b9a65-884f-3aa9-9469-bf6ec0f08610",
+      "tls": {
+        "enabled": true,
+        "server_name": "45.32.28.232",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "149 @Hiddify_Nexttt § 151",
+      "server": "104.21.24.195",
+      "server_port": 443,
+      "password": "a4291a2a-d62c-4eb9-ac7a-ac7355d1eda2",
+      "tls": {
+        "enabled": true,
+        "server_name": "RRrFGhy7.999836.XYZ",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/mFvK3LJyIAe8ydvnmRKWDa8",
+        "headers": {
+          "Host": "rrrfghy7.999836.xyz"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "150 @Hiddify_Nexttt § 152",
+      "server": "usa.liangyuandian.top",
+      "server_port": 443,
+      "password": "58dcd460-65df-47b1-b062-517df30bef29",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "151 @Hiddify_Nexttt § 153",
+      "server": "35.77.146.185",
+      "server_port": 443,
+      "password": "3778399737045327872",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "152 @Hiddify_Nexttt § 154",
+      "server": "185.44.76.188",
+      "server_port": 443,
+      "password": "8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "153 @Hiddify_Nexttt § 155",
+      "server": "usla.mjt000.com",
+      "server_port": 443,
+      "password": "e4af2638-bb12-4e4a-84f1-a032e23ca63f",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "154 @Hiddify_Nexttt § 156",
+      "server": "official.taipeicitygovernment.if.ua",
+      "server_port": 8443,
+      "password": "96983eb4-c8f1-316e-ab00-500014ed3d8b",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "155 @Hiddify_Nexttt § 157",
+      "server": "in01.trojanyyds.xyz",
+      "server_port": 443,
+      "password": "36d48ba9-7445-4b41-b210-58f4e07a627a",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "156 @Hiddify_Nexttt § 158",
+      "server": "38.9.140.66",
+      "server_port": 443,
+      "password": "vvip-periantara",
+      "tls": {
+        "enabled": true,
+        "server_name": "id3tr.jagoan.vip",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "157 @Hiddify_Nexttt § 159",
+      "server": "185.44.76.188",
+      "server_port": 443,
+      "password": "8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "158 @Hiddify_Nexttt § 160",
+      "server": "104.21.68.76",
+      "server_port": 443,
+      "password": "2e65577e-8fdb-4bb1-a495-96f3122099a7",
+      "tls": {
+        "enabled": true,
+        "server_name": "zzzZZZZz.222769.XYZ",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Ws1FkyQlT190JQOSZb9TPR",
+        "headers": {
+          "Host": "zzzzzzzz.222769.xyz"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "159 @Hiddify_Nexttt § 161",
+      "server": "tw01.trojanyyds.xyz",
+      "server_port": 443,
+      "password": "6a91134d-1e3f-4b63-9a46-99515cb62596",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "160 @Hiddify_Nexttt § 162",
+      "server": "official.tokyometropolis.kherson.ua",
+      "server_port": 2053,
+      "password": "96983eb4-c8f1-316e-ab00-500014ed3d8b",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "161 @Hiddify_Nexttt § 163",
+      "server": "150.230.201.192",
+      "server_port": 443,
+      "password": "f42e1a2e-e650-44f4-8d17-bcb68663da18",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.seetheworldjp.ga",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "162 @Hiddify_Nexttt § 164",
+      "server": "kr.mjt001.com",
+      "server_port": 443,
+      "password": "af4dc66a-ec88-4057-9e46-777b584577f7",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "163 @Hiddify_Nexttt § 165",
+      "server": "15.197.162.184",
+      "server_port": 443,
+      "password": "7778e684-f435-4166-bf9e-0256cb28bf10",
+      "tls": {
+        "enabled": true,
+        "server_name": "download2hkt.windowsupdate.lol",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "164 @Hiddify_Nexttt § 166",
+      "server": "104.21.94.69",
+      "server_port": 443,
+      "password": "13e26f64-2e0c-4461-92cd-d83294cc18f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "dddDvvbHY7.000890604.XyZ",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/TDUxZUop9k44oPiit2OdWk0KwirdY",
+        "headers": {
+          "Host": "ddddvvbhy7.000890604.xyz"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "165 @Hiddify_Nexttt § 167",
+      "server": "download2hkt.windowsupdate.lol",
+      "server_port": 443,
+      "password": "af4d2493-9156-4514-9f6b-ee5d1a1e4713",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "166 @Hiddify_Nexttt § 168",
+      "server": "150.230.201.192",
+      "server_port": 443,
+      "password": "f42e1a2e-e650-44f4-8d17-bcb68663da18",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.seetheworldjp.ga",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "167 @Hiddify_Nexttt § 169",
+      "server": "hk04.trojanyyds.xyz",
+      "server_port": 443,
+      "password": "9bb27128-e6d2-4cac-bbd3-beb46c4417f8",
+      "tls": {
+        "enabled": true,
+        "disable_sni": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "168 @Hiddify_Nexttt § 170",
+      "server": "104.21.37.37",
+      "server_port": 443,
+      "password": "WOeXShhJpL"
+    },
+    {
+      "type": "hysteria",
+      "tag": "169 @Hiddify_Nexttt § 171",
+      "server": "208.87.243.187",
+      "server_port": 40528,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria",
+      "tag": "170 @Hiddify_Nexttt § 172",
+      "server": "176.32.35.226",
+      "server_port": 62003,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria",
+      "tag": "171 @Hiddify_Nexttt § 173",
+      "server": "108.181.24.77",
+      "server_port": 11512,
+      "up_mbps": 10,
+      "down_mbps": 50,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "172 @Hiddify_Nexttt § 174",
+      "server": "51.159.111.32",
+      "server_port": 31180,
+      "password": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "173 @Hiddify_Nexttt § 175",
+      "server": "209.141.47.127",
+      "server_port": 3234,
+      "password": "65a43b6e-19c5-4fab-b960-d110a07d66a4",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "174 @Hiddify_Nexttt § 176",
+      "server": "ztcloudkr.ztcloud.xyz",
+      "server_port": 18540,
+      "password": "74f8f377-a481-4da5-a798-41d737ce7b28",
+      "tls": {
+        "enabled": true,
+        "server_name": "ztcloudkr.ztcloud.xyz",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "175 @Hiddify_Nexttt § 177",
+      "server": "107.175.34.118",
+      "server_port": 3002,
+      "password": "14bdcd31-8a9f-4cf1-8fcc-60045900357d",
+      "tls": {
+        "enabled": true,
+        "server_name": "us.10101251.xyz",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "176 @Hiddify_Nexttt § 178",
+      "server": "129.153.59.124",
+      "server_port": 54530,
+      "password": "862e90e1-2f26-4506-b8b9-0adf20da05fc",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "177 @Hiddify_Nexttt § 179",
+      "server": "45.129.2.108",
+      "server_port": 50850,
+      "password": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "178 @Hiddify_Nexttt § 180",
+      "server": "108.181.5.130",
+      "server_port": 4710,
+      "password": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "1-500",
+        "sleep": "0-500"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "update_interval": "120h0m0s"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "secret": "R3i9t145wMNxogfv"
+    }
+  }
+}
