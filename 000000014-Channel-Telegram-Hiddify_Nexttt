@@ -1,0 +1,264 @@
+
+{
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1/dns-query ",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "local",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": "homa.cybsecguru.com",
+        "server": "dns-direct"
+      },
+      {
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "188.114.97.1",
+        "188.114.96.1",
+        "2a06:98c1:3120::1",
+        "2a06:98c1:3121::1",
+        "104.17.148.22",
+        "104.17.147.22",
+        "188.114.96.1",
+        "188.114.97.1",
+        "2a06:98c1:3121::1",
+        "2a06:98c1:3120::1"
+      ]
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 6450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇸🇪 @Hiddify_Nexttt کانال تلگرامی ما§ 0 ",
+        "🇸🇪 @Hiddify_Nexttt کانال تلگرامی ما§ 1",
+        "🇸🇪 @Hiddify_Nexttt کانال تلگرامی ما§ 2"
+        
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇸🇪 @Hiddify_Nexttt کانال تلگرامی ما§ 0 ",
+        "🇸🇪 @Hiddify_Nexttt کانال تلگرامی ما§ 1",
+        "🇸🇪 @Hiddify_Nexttt کانال تلگرامی ما§ 2"
+      ],
+      "url": "http://connectivitycheck.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
+    },
+    
+    {
+      "type": "vless",
+      "tag":  "🇸🇪 @Hiddify_Nexttt کانال تلگرامی ما§ 0 ",
+      "server": "homa.cybsecguru.com",
+      "server_port": 62001,
+      "uuid": "f94d67bc-9e21-4399-98f9-d30c8715149c",
+      "tls": {
+        "enabled": true,
+        "server_name": "tile.openstreetmap.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bGnpkihzVNt2CX8pvwL92oiVRIjvnlw6btZ3qhB9wXs",
+          "short_id": "438e39c2bb187bb3"
+        }
+      },
+      "multiplex": {
+        "protocol": "h2mux",
+        "max_streams": 8
+      }
+    },
+    
+    {
+      "type": "vmess",
+      "tag": "🇸🇪 @Hiddify_Nexttt کانال تلگرامی ما§ 1",
+      "server": "homa.cybsecguru.com",
+      "server_port": 62003,
+      "uuid": "ff57c16b-eb93-4807-9e42-de4ce24ed378",
+      "security": "",
+      "multiplex": {
+        "protocol": "h2mux",
+        "max_streams": 8
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "host": "tile.openstreetmap.org",
+        "path": "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag":  "🇸🇪 @Hiddify_Nexttt کانال تلگرامی ما§ 2",
+      "server": "homa.cybsecguru.com",
+      "server_port": 62004,
+      "uuid": "ff57c16b-eb93-4807-9e42-de4ce24ed378",
+      "security": "",
+      "multiplex": {
+        "protocol": "h2mux",
+        "max_streams": 8
+      },
+      "transport": {
+        "type": "http",
+        "host": "tile.openstreetmap.org",
+        "path": "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/",
+        "method": "GET",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "1-500",
+        "sleep": "0-500"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "update_interval": "120h0m0s"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "secret": "O1_bZMPrJ0oALwFm"
+    }
+  }
+}
