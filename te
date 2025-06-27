@@ -1,0 +1,413 @@
+{
+    "log": {
+      "level": "warn",
+      "timestamp": true
+    },
+    "dns": {
+      "servers": [
+        {
+          "tag": "dns_proxy",
+          "address": "tcp://8.8.8.8",
+          "address_resolver": "dns_direct",
+          "strategy": "prefer_ipv4",
+          "detour": "Hiddify_Nexttt"
+        },
+        {
+          "tag": "dns_proxy_ipv4",
+          "address": "tcp://8.8.8.8",
+          "address_resolver": "dns_direct",
+          "strategy": "ipv4_only",
+          "detour": "Hiddify_Nexttt"
+        },
+        {
+          "tag": "dns_direct",
+          "address": "local",
+          "strategy": "prefer_ipv4",
+          "detour": "Hiddify_Nexttt"
+        },
+        {
+          "tag": "dns_block",
+          "address": "rcode://success"
+        }
+      ],
+      "rules": [
+        {
+          "outbound": "any",
+          "server": "dns_direct"
+        }
+
+      ],
+      "final": "dns_proxy",
+      "independent_cache": true
+    },
+    "ntp": {
+      "enabled": true,
+      "server": "ir.pool.ntp.org",
+      "server_port": 123,
+      "detour": "direct"
+    },
+    "inbounds": [
+      {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 20122,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": true
+    },
+    {
+      "type": "http",
+      "listen": "127.0.0.1",
+      "listen_port": 8181,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": true
+    },
+    {
+      "type": "socks",
+      "listen": "127.0.0.1",
+      "listen_port": 8080,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": true
+    },
+    {
+      "type": "tun",
+     "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": false,
+      "stack": "mixed",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 20122
+        }
+      },
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    }
+
+    ],
+     "outbounds": [
+{
+        "type": "selector",
+        "tag": "@Hiddify_Nexttt 👈 کانال تلگرام ما",
+        "outbounds": [
+          "عضو کانال ما بشید",
+          "عضو کانال ما بشید"
+
+        ],
+        "default": "عضو کانال ما بشید",
+        "interrupt_exist_connections": true
+      },
+
+   {
+        "type": "selector",
+        "tag": "Hiddify_Nexttt",
+        "outbounds": [
+          "عضو کانال ما بشید",
+          "عضو کانال ما بشید"
+
+        ],
+        "default": "عضو کانال ما بشید",
+        "interrupt_exist_connections": true
+      },
+        {
+            "tag": "@Hiddify_Nexttt",
+            "type": "selector",
+            "outbounds": [
+                "عضو کانال ما بشید",
+                "Finland 🇫🇮",
+                "France 🇫🇷",
+                 "Belgium 🇧🇪",
+                 "Canada 🇨🇦",
+                 "Denmark 🇩🇰",
+                 "United Kingdom 🇬🇧",
+                 "Italy 🇮🇹"
+            
+            ]
+        },
+
+{
+            "tag": "عضو کانال ما بشید",
+            "type": "urltest",
+            "outbounds": [
+
+                        "عضو کانال ما بشید",
+                "Finland 🇫🇮",
+                "France 🇫🇷",
+                 "Belgium 🇧🇪",
+                 "Canada 🇨🇦",
+                 "Denmark 🇩🇰",
+                 "United Kingdom 🇬🇧",
+                 "Italy 🇮🇹"
+
+
+      ],
+      "url": "http://cp.cloudflare.com",
+      "interval": "10m0s"
+
+    },
+
+   
+            
+    
+           
+    
+                        {
+            "headers": {
+                "Host": [
+                    "stream.meet.google.com"
+                ]
+            },
+            "password": "IUjWlr0gAPZSMc",
+            "path": "",
+            "server": "prox-fi.pointtoserver.com",
+            "server_port": 10780,
+            "domain_strategy": "",
+            "tag": "Finland 🇫🇮",
+            "tls": {
+                "alpn": [
+                    "h2,http/1.1"
+                ],
+                "disable_sni": false,
+                "enabled": false,
+
+                "server_name": "ieee.org"
+            },
+            "type": "http",
+            "username": "purevpn0s14356271"
+        },
+           {
+            "headers": {
+                "Host": [
+                    "stream.meet.google.com"
+                ]
+            },
+            "password": "IUjWlr0gAPZSMc",
+            "path": "",
+            "server": "prox-fr.pointtoserver.com",
+            "server_port": 10780,
+            "domain_strategy": "",
+            "tag": "France 🇫🇷",
+            "tls": {
+                "alpn": [
+                    "h2,http/1.1"
+                ],
+                "disable_sni": false,
+                "enabled": false,
+
+                "server_name": "ieee.org"
+            },
+            "type": "http",
+            "username": "purevpn0s14356271"
+        },
+
+{
+            "headers": {
+                "Host": [
+                    "stream.meet.google.com"
+                ]
+            },
+            "password": "IUjWlr0gAPZSMc",
+            "path": "",
+            "server": "prox-be.pointtoserver.com",
+            "server_port": 10780,
+            "domain_strategy": "",
+            "tag": "Belgium 🇧🇪",
+            "tls": {
+                "alpn": [
+                    "h2,http/1.1"
+                ],
+                "disable_sni": false,
+                "enabled": false,
+
+                "server_name": "ieee.org"
+            },
+            "type": "http",
+            "username": "purevpn0s14356271"
+        },
+
+{
+            "headers": {
+                "Host": [
+                    "stream.meet.google.com"
+                ]
+            },
+            "password": "IUjWlr0gAPZSMc",
+            "path": "",
+            "server": "prox-ca.pointtoserver.com",
+            "server_port": 10780,
+            "domain_strategy": "",
+            "tag": "Canada 🇨🇦",
+            "tls": {
+                "alpn": [
+                    "h2,http/1.1"
+                ],
+                "disable_sni": false,
+                "enabled": false,
+
+                "server_name": "ieee.org"
+            },
+            "type": "http",
+            "username": "purevpn0s14356271"
+        },
+
+{
+            "headers": {
+                "Host": [
+                    "stream.meet.google.com"
+                ]
+            },
+            "password": "IUjWlr0gAPZSMc",
+            "path": "",
+            "server": "prox-dk.pointtoserver.com",
+            "server_port": 10780,
+            "domain_strategy": "",
+            "tag": "Denmark 🇩🇰",
+            "tls": {
+                "alpn": [
+                    "h2,http/1.1"
+                ],
+                "disable_sni": false,
+                "enabled": false,
+
+                "server_name": "ieee.org"
+            },
+            "type": "http",
+            "username": "purevpn0s14356271"
+        },
+
+{
+            "headers": {
+                "Host": [
+                    "stream.meet.google.com"
+                ]
+            },
+            "password": "IUjWlr0gAPZSMc",
+            "path": "",
+            "server": "prox-is.pointtoserver.com",
+            "server_port": 10780,
+            "domain_strategy": "",
+            "tag": "United Kingdom 🇬🇧",
+            "tls": {
+                "alpn": [
+                    "h2,http/1.1"
+                ],
+                "disable_sni": false,
+                "enabled": false,
+
+                "server_name": "ieee.org"
+            },
+            "type": "http",
+            "username": "purevpn0s14356271"
+        },
+{
+            "headers": {
+                "Host": [
+                    "stream.meet.google.com"
+                ]
+            },
+            "password": "IUjWlr0gAPZSMc",
+            "path": "",
+            "server": "prox-it.pointtoserver.com",
+            "server_port": 10780,
+            "domain_strategy": "",
+            "tag": "Italy 🇮🇹",
+            "tls": {
+                "alpn": [
+                    "h2,http/1.1"
+                ],
+                "disable_sni": false,
+                "enabled": false,
+
+                "server_name": "ieee.org"
+            },
+            "type": "http",
+            "username": "purevpn0s14356271"
+        },
+{
+      "type": "direct",
+      "tag": "direct"
+    },
+
+
+  ],
+    "route": {
+     "rules": [
+      {
+        "inbound": "tun-in",
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "Hiddify_Nexttt"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "network": "tcp",
+        "port": 853,
+        "action": "reject",
+        "method": "default"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "action": "reject",
+        "method": "default"
+      },
+
+      {
+        "inbound": "tun-in",
+        "action": "resolve"
+      },
+
+      {
+        "ip_cidr": "10.10.34.0/24",
+        "outbound": "Hiddify_Nexttt"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+
+    ],
+      "final" : "Hiddify_Nexttt",
+      "auto_detect_interface": true,
+      "override_android_vpn": true
+    },
+    "experimental": {
+      "cache_file": {
+        "enabled": true,
+        "path": "cache.db",
+        "store_fakeip": true
+      },
+      "clash_api": {
+        "default_mode": "@Hiddify_Nexttt 👈🏻کانال تلگرام"
+      }
+    }
+  }
