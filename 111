@@ -1,0 +1,467 @@
+{
+  "log": {
+    "level": "error"
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "local-dns",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "test-dns",
+        "address": "https://146.112.41.2/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "direct-dns",
+        "address": "https://8.8.8.8/dns-query"
+      },
+      {
+        "tag": "remote-dns",
+        "address": "https://1.0.0.1/dns-query"
+      },
+      {
+        "tag": "final-dns",
+        "address": "https://9.9.9.10/dns-query"
+      }
+    ],
+    "rules": [
+      {
+        "domain_suffix": "jsdelivr.net",
+        "server": "local-dns"
+      },
+      {
+        "outbound": "any",
+        "server": "test-dns"
+      },
+      {
+        "domain_suffix": ".ir",
+        "server": "direct-dns"
+      },
+      {
+        "rule_set": "xal",
+        "server": "direct-dns"
+      },
+      {
+        "rule_set": "oki",
+        "server": "remote-dns"
+      }
+    ],
+    "final": "final-dns",
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun0",
+      "mtu": 9000,
+      "address": "172.19.0.1/30",
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
+      }
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 7891
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "qqoli",
+      "outbounds": [
+        "mmobi",
+        "qoli_02",
+        "qoli_05",
+        "qoli_07",
+
+        "qoli_10",
+        "qoli_11",
+
+        "qoli_22",
+        
+        "qoli_54",
+        "qoli_55",
+      
+        "qoli_70"
+       
+      ],
+      "default": "mmobi"
+    },
+    {
+      "type": "urltest",
+      "tag": "mmobi",
+      "outbounds": [
+          "qoli_02",
+        "qoli_05",
+        "qoli_07",
+
+        "qoli_10",
+        "qoli_11",
+
+        "qoli_22",
+        
+        "qoli_54",
+        "qoli_55",
+      
+        "qoli_70"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "6m0s",
+      "tolerance": 5
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+   
+    {
+      "type": "vless",
+      "tag": "qoli_02",
+      "server": "104.18.13.122",
+      "server_port": 443,
+      "uuid": "f78ce1bb-0fa6-4ef4-b4c9-b91014a7055d",
+      "tls": {
+        "enabled": true,
+        "server_name": "delam.ahaysiahzangi.dpdns.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "delam.ahaysiahzangi.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    
+    {
+      "type": "vless",
+      "tag": "qoli_05",
+      "server": "104.25.81.220",
+      "server_port": 443,
+      "uuid": "4e4768df-0fbb-4cc1-8fd3-7c6fea95742a",
+      "tls": {
+        "enabled": true,
+        "server_name": "rayan-08.parastoo.dpdns.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Rayan_Config",
+        "headers": {
+          "Host": "rayan-08.parastoo.dpdns.org"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+       {
+      "type": "vless",
+      "tag": "qoli_07",
+      "server": "138.124.15.83",
+      "server_port": 443,
+      "uuid": "d7fe8020-c70e-5c5c-9869-e591b36ab7eb",
+      "tls": {
+        "enabled": true,
+        "server_name": "138.124.15.83",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "138.124.15.83"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+  
+    {
+      "type": "vless",
+      "tag": "qoli_10",
+      "server": "157.173.127.233",
+      "server_port": 443,
+      "uuid": "17a6e953-8fac-428c-b86c-8585722b0b52",
+      "tls": {
+        "enabled": true,
+        "server_name": "analytics.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "MbTwpwMFXu8duJgVMb_jFpqEuopSWJW1FPH_D6fZAEM",
+          "short_id": "1f"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "qoli_11",
+      "server": "162.159.129.67",
+      "server_port": 8443,
+      "uuid": "d6b8011a-c725-435a-9fec-bf6d3530392c",
+      "tls": {
+        "enabled": true,
+        "server_name": "vle.amclubsdns.dpdns.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vle.amclubsdns.dpdns.org"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+   
+    {
+      "type": "vless",
+      "tag": "qoli_22",
+      "server": "185.248.187.69",
+      "server_port": 10297,
+      "uuid": "9db6acf4-d3d3-4176-f704-0da5f6da6165",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.sega.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UtL7E0Gmxj3X5JdcPAutpTRKo7K2hugkR0vwk2XroUM"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+      {
+      "type": "vless",
+      "tag": "qoli_54",
+      "server": "whatismyipaddress.com",
+      "server_port": 2096,
+      "uuid": "7585f059-2c89-4a02-9dff-394bb7913ef5",
+      "tls": {
+        "enabled": true,
+        "server_name": "wwwspeedtestnetwhiteberinsistomd6625996s03.gatesriver.ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "wwwspeedtestnetwhiteberinsistomd6625996s03.gatesriver.ir"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "qoli_55",
+      "server": "whatismyipaddress.com",
+      "server_port": 2096,
+      "uuid": "7585f059-2c89-4a02-9dff-394bb7913ef5",
+      "tls": {
+        "enabled": true,
+        "server_name": "wwwspeedtestnetwhiteberinsistomd6625996s02.gatesriver.ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "wwwspeedtestnetwhiteberinsistomd6625996s02.gatesriver.ir"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    
+    {
+      "type": "vless",
+      "tag": "qoli_70",
+      "server": "privasi.turah.my.id",
+      "server_port": 443,
+      "uuid": "0fbf4f81-2598-4b6a-a623-0ead4cb9efa8",
+      "tls": {
+        "enabled": true,
+        "server_name": "privasi.turah.my.id"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Free-CF-Proxy-AD192.3.113.4-19318",
+        "headers": {
+          "Host": "privasi.turah.my.id"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+   
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": "tun-in",
+        "action": "sniff",
+        "timeout": "500ms"
+      },
+      {
+        "inbound": "mixed-in",
+        "action": "sniff",
+        "timeout": "500ms"
+      },
+      {
+        "inbound": "tun-in",
+        "action": "resolve",
+        "strategy": "prefer_ipv4"
+      },
+      {
+        "inbound": "mixed-in",
+        "action": "resolve",
+        "strategy": "prefer_ipv4"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "port": 53,
+        "action": "hijack-dns"
+      },
+      {
+        "protocol": "quic",
+        "action": "reject"
+      },
+      {
+        "protocol": "stun",
+        "action": "reject"
+      },
+      {
+        "ip_cidr": [
+          "224.0.0.0/3",
+          "10.10.34.0/24"
+        ],
+        "action": "reject"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "network": "tcp"
+          },
+          {
+            "port": 853
+          }
+        ],
+        "action": "reject"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "network": "udp"
+          },
+          {
+            "port": 443
+          }
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": "aff",
+        "action": "reject"
+      },
+      {
+        "rule_set": "yun",
+        "action": "reject"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "domain_suffix": ".ir",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "xal",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "loo",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "oki",
+        "outbound": "qqoli"
+      },
+      {
+        "rule_set": "doki",
+        "outbound": "qqoli"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "aff",
+        "url": "https://cdn.jsdelivr.net/gh/liketolivefree/kobabi@main/aff.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "yun",
+        "url": "https://cdn.jsdelivr.net/gh/liketolivefree/kobabi@main/yun.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "oki",
+        "url": "https://cdn.jsdelivr.net/gh/liketolivefree/kobabi@main/oki.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "doki",
+        "url": "https://cdn.jsdelivr.net/gh/liketolivefree/kobabi@main/doki.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "xal",
+        "url": "https://cdn.jsdelivr.net/gh/liketolivefree/kobabi@main/xal.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "loo",
+        "url": "https://cdn.jsdelivr.net/gh/liketolivefree/kobabi@main/loo.srs",
+        "download_detour": "direct"
+      }
+    ],
+    "final": "qqoli",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
+  }
+}
