@@ -1,0 +1,340 @@
+mixed-port: 10801
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+global-client-fingerprint: chrome
+mode: rule
+log-level: debug
+ipv6: true
+bind-address: "*"
+keep-alive-interval: 30
+unified-delay: true
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack:
+    - "any:53"
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+
+dns:
+  enable: true
+  listen: :1053
+  prefer-h3: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - "+.lan"
+    - "+.local"
+    - "+.localhost"
+    - "+.localdomain"
+    - "+.ip6-localhost"
+    - "+.ip6-loopback"
+    - "*.example"
+    - "*.invalid"
+    - "*.test"
+    - "*.home.arpa"
+    - "time.nist.gov"
+    - "time.windows.com"
+    - "time.*.apple.com"
+    - "time.android.com"
+  nameserver:
+    - "https://1.1.1.1/dns-query#PROXY&h3=true"
+    - "https://1.1.1.1/dns-query#PROXY"
+  proxy-server-nameserver:
+    - "178.22.122.100"
+    - "10.202.10.202"
+    - "78.157.42.100"
+
+proxies:
+  - {
+      name: "فریدون محمودی 🇹🇷",
+      type: http,
+      server: prox-tr.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "محمد امینی 🇦🇪",
+      type: http,
+      server: prox-ae.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "آرین مریدی 🇩🇿",
+      type: http,
+      server: prox-al.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "کیان پیر فلک 🇦🇹",
+      type: http,
+      server: prox-at.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "محمدجواد زاهدی 🇦🇺",
+      type: http,
+      server: prox-au.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "احمد شکراللهی 🇧🇬",
+      type: http,
+      server: prox-bg.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "اسماعیل دزوار 🇧🇷",
+      type: http,
+      server: prox-br.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "امید مهدوی 🇨🇦",
+      type: http,
+      server: prox-ca.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "سینا نادری 🇩🇪",
+      type: http,
+      server: prox-de.pointtoserver.com,
+      port: 10780,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "آرمین صیادی 🇨🇱",
+      type: http,
+      server: prox-cl.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+  - {
+      name: "عزیز مرادی 🇨🇿",
+      type: http,
+      server: prox-cz.pointtoserver.com,
+      port: 10799,
+      username: purevpn0s14187318,
+      password: dUsOF552ZXVAWD,
+      tls: false,
+      skip-cert-verify: false,
+      sni: ieee.org,
+    }
+
+proxy-groups:
+  - name: "ابول کور کور ایذه"
+    type: "select"
+    proxies:
+      - "اعتراضات سراسری"
+      - "کانال wearestand"
+      - "رضا شاه روحت شاد"
+      - فریدون محمودی 🇹🇷
+      - محمد امینی 🇦🇪
+      - آرین مریدی 🇩🇿
+      - کیان پیر فلک 🇦🇹
+      - محمدجواد زاهدی 🇦🇺
+      - احمد شکراللهی 🇧🇬
+      - اسماعیل دزوار 🇧🇷
+      - امید مهدوی 🇨🇦
+      - سینا نادری 🇩🇪
+      - آرمین صیادی 🇨🇱
+      - عزیز مرادی 🇨🇿
+
+  - name: "اعتراضات سراسری"
+    type: "url-test"
+    tolerance: 150
+    url: "https://www.gstatic.com/generate_204"
+    interval: 300
+    proxies:
+      - فریدون محمودی 🇹🇷
+      - محمد امینی 🇦🇪
+      - آرین مریدی 🇩🇿
+      - کیان پیر فلک 🇦🇹
+      - محمدجواد زاهدی 🇦🇺
+      - احمد شکراللهی 🇧🇬
+      - اسماعیل دزوار 🇧🇷
+      - امید مهدوی 🇨🇦
+      - سینا نادری 🇩🇪
+      - آرمین صیادی 🇨🇱
+      - عزیز مرادی 🇨🇿
+
+  - name: "کانال wearestand"
+    type: "fallback"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 300
+    proxies:
+      - فریدون محمودی 🇹🇷
+      - محمد امینی 🇦🇪
+      - آرین مریدی 🇩🇿
+      - کیان پیر فلک 🇦🇹
+      - محمدجواد زاهدی 🇦🇺
+      - احمد شکراللهی 🇧🇬
+      - اسماعیل دزوار 🇧🇷
+      - امید مهدوی 🇨🇦
+      - سینا نادری 🇩🇪
+      - آرمین صیادی 🇨🇱
+      - عزیز مرادی 🇨🇿
+
+  - name: "رضا شاه روحت شاد"
+    type: "load-balance"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 300
+    strategy: "consistent-hashing"
+    proxies:
+      - فریدون محمودی 🇹🇷
+      - محمد امینی 🇦🇪
+      - آرین مریدی 🇩🇿
+      - کیان پیر فلک 🇦🇹
+      - محمدجواد زاهدی 🇦🇺
+      - احمد شکراللهی 🇧🇬
+      - اسماعیل دزوار 🇧🇷
+      - امید مهدوی 🇨🇦
+      - سینا نادری 🇩🇪
+      - آرمین صیادی 🇨🇱
+      - عزیز مرادی 🇨🇿
+
+rule-providers:
+  ir:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ir.txt"
+    path: ./ruleset/ir.txt
+    interval: 86400
+  ads:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ads.txt"
+    path: ./ruleset/ads.txt
+    interval: 86400
+  malware:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.txt"
+    path: ./ruleset/malware.txt
+    interval: 86400
+  phishing:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.txt"
+    path: ./ruleset/phishing.txt
+    interval: 86400
+  cryptominers:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt"
+    path: ./ruleset/cryptominers.txt
+    interval: 86400
+  apps:
+    type: http
+    format: text
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/apps.txt"
+    path: ./ruleset/apps.txt
+    interval: 86400
+  ircidr:
+    type: http
+    format: text
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt"
+    path: ./ruleset/ircidr.txt
+    interval: 86400
+  private:
+    type: http
+    format: text
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/private.txt"
+    path: ./ruleset/private.txt
+    interval: 86400
+  
+rules:
+  - IP-CIDR,10.10.34.0/24,ابول کور کور ایذه
+  - RULE-SET,private,DIRECT,no-resolve
+  - RULE-SET,apps,DIRECT
+  - RULE-SET,ads,REJECT
+  - RULE-SET,malware,REJECT
+  - RULE-SET,phishing,REJECT
+  - RULE-SET,cryptominers,REJECT
+  - RULE-SET,ir,DIRECT
+  - RULE-SET,ircidr,DIRECT
+  - MATCH,ابول کور کور ایذه
