@@ -1,0 +1,967 @@
+#حق_کپی_کردن_و_تغییر_تگها_رو_نداره_کسی
+ #اسکی_نرو_بی
+#بفهمم_
+
+{
+  "log": {
+    "level": "panic",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_@Hiddify_Nexttty",
+        "address": "https://1.1.1.1/dns-query",
+        "address_resolver": "dns_direct",
+        "strategy": "prefer_ipv4",
+        "detour": "@Hiddify_Nexttt👈🏻تلگرام"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "local",
+        "strategy": "prefer_ipv4",
+        "detour": "@Hiddify_Nexttt 👈🏻تلگرام "
+      },
+      {
+        "tag": "dns_block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "dns_@Hiddify_Nexttty",
+        "server": "dns_direct"
+      }
+    ],
+    "final": "dns_@Hiddify_Nexttty",
+    "independent_cache": true
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "ir.pool.ntp.org",
+    "server_port": 123,
+    "detour": "direct"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 20122,
+      "udp_fragment": true,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "http",
+      "listen": "127.0.0.1",
+      "listen_port": 8181,
+      "udp_fragment": true,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "socks",
+      "listen": "127.0.0.1",
+      "listen_port": 8080,
+      "udp_fragment": true,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "tun",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 20122
+        }
+      },
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام",
+      "outbounds": [
+        "@Hiddify_Nexttt 👈🏻تلگرام ",
+        "@Hiddify_Nexttt 👈🏻تلگرام "
+      ],
+      "default": "@Hiddify_Nexttt 👈🏻تلگرام ",
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "selector",
+      "tag": "همراه اول 🔵",
+      "outbounds": [
+        "@Hiddify_Nexttt👈🏻تلگرام🇷🇴",
+        "@Hiddify_Nexttt👈🏻تلگرام🇫🇷",
+        "@Hiddify_Nexttt👈🏻تلگرام🇸🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇦🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇩🇿",
+        "@Hiddify_Nexttt👈🏻تلگرام🇦🇹",
+        "@Hiddify_Nexttt👈🏻تلگرام🇦🇺",
+        "@Hiddify_Nexttt👈🏻تلگرام🇧🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇧🇬",
+        "@Hiddify_Nexttt👈🏻تلگرام🇧🇷",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇦",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇭",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇱",
+        "@Hiddify_Nexttt👈🏻تلگرام🇲🇩",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇾",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇿",
+        "@Hiddify_Nexttt👈🏻تلگرام🇩🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇩🇰",
+        "@Hiddify_Nexttt👈🏻تلگرام🇺🇸",
+        "@Hiddify_Nexttt👈🏻تلگرام🇪🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇪🇸",
+        "@Hiddify_Nexttt👈🏻تلگرام🇱🇺",
+        "@Hiddify_Nexttt👈🏻تلگرام🇹🇷",
+        "@Hiddify_Nexttt👈🏻تلگرام🇬🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇬🇷",
+        "@Hiddify_Nexttt👈🏻تلگرام🇭🇰",
+        "@Hiddify_Nexttt👈🏻تلگرام🇭🇺",
+        "@Hiddify_Nexttt👈🏻تلگرام🇸🇬",
+        "@Hiddify_Nexttt👈🏻تلگرام🇬🇧",
+        "@Hiddify_Nexttt👈🏻تلگرام🇮🇹",
+        "@Hiddify_Nexttt👈🏻تلگرام🇱🇹",
+        "@Hiddify_Nexttt👈🏻تلگرام🇳🇱",
+        "@Hiddify_Nexttt👈🏻تلگرام🇹🇩",
+        "@Hiddify_Nexttt👈🏻تلگرام🇧🇭",
+        "@Hiddify_Nexttt-US-5",
+        "@Hiddify_Nexttt-US-6"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "ایرانسل 🟡",
+      "outbounds": [
+        "@Hiddify_Nexttt👈🏻🇭🇳",
+        "@Hiddify_Nexttt👈🏻🇺🇸",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇾",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇿",
+        "@Hiddify_Nexttt👈🏻تلگرام🇩🇪",
+        "🇩🇰@Hiddify_Nexttt👈🏻🟡",
+        "🇫🇷@Hiddify_Nexttt👈🏻🟡",
+        "@Hiddify_Nexttt-DE-3",
+        "@Hiddify_Nexttt-US-4",
+        "@Hiddify_Nexttt-US-5",
+        "@Hiddify_Nexttt-US-6"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "@Hiddify_Nexttt 👈🏻تلگرام ",
+      "outbounds": [
+        "@Hiddify_Nexttt👈🏻تلگرام🇷🇴",
+        "@Hiddify_Nexttt👈🏻تلگرام🇫🇷",
+        "@Hiddify_Nexttt👈🏻تلگرام🇸🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇦🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇩🇿",
+        "@Hiddify_Nexttt👈🏻تلگرام🇦🇹",
+        "@Hiddify_Nexttt👈🏻تلگرام🇦🇺",
+        "@Hiddify_Nexttt👈🏻تلگرام🇧🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇧🇬",
+        "@Hiddify_Nexttt👈🏻تلگرام🇧🇷",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇦",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇭",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇱",
+        "@Hiddify_Nexttt👈🏻تلگرام🇲🇩",
+        "@Hiddify_Nexttt👈🏻🇭🇳",
+        "@Hiddify_Nexttt👈🏻🇺🇸",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇾",
+        "@Hiddify_Nexttt👈🏻تلگرام🇨🇿",
+        "@Hiddify_Nexttt👈🏻تلگرام🇩🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇩🇰",
+        "@Hiddify_Nexttt👈🏻تلگرام🇺🇸",
+        "@Hiddify_Nexttt👈🏻تلگرام🇪🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇪🇸",
+        "@Hiddify_Nexttt👈🏻تلگرام🇱🇺",
+        "@Hiddify_Nexttt👈🏻تلگرام🇹🇷",
+        "@Hiddify_Nexttt👈🏻تلگرام🇬🇪",
+        "@Hiddify_Nexttt👈🏻تلگرام🇬🇷",
+        "@Hiddify_Nexttt👈🏻تلگرام🇭🇰",
+        "@Hiddify_Nexttt👈🏻تلگرام🇭🇺",
+        "@Hiddify_Nexttt👈🏻تلگرام🇸🇬",
+        "@Hiddify_Nexttt👈🏻تلگرام🇬🇧",
+        "🇩🇰@Hiddify_Nexttt👈🏻🟡",
+        "🇫🇷@Hiddify_Nexttt👈🏻🟡",
+        "@Hiddify_Nexttt👈🏻تلگرام🇮🇹",
+        "@Hiddify_Nexttt👈🏻تلگرام🇱🇹",
+        "@Hiddify_Nexttt👈🏻تلگرام🇳🇱",
+        "@Hiddify_Nexttt👈🏻تلگرام🇹🇩",
+        "@Hiddify_Nexttt👈🏻تلگرام🇧🇭",
+        "@Hiddify_Nexttt-DE-3",
+        "@Hiddify_Nexttt-US-4",
+        "@Hiddify_Nexttt-US-5",
+        "@Hiddify_Nexttt-US-6"
+      ],
+      "url": "http://cp.cloudflare.com",
+      "interval": "5m0s"
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇷🇴",
+      "server": "@Hiddify_Nexttt-ro.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇫🇷",
+      "server": "@Hiddify_Nexttt-es.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇸🇪",
+      "server": "@Hiddify_Nexttt-se.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇦🇪",
+      "server": "@Hiddify_Nexttt-ae.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇩🇿",
+      "server": "@Hiddify_Nexttt-al.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇦🇹",
+      "server": "@Hiddify_Nexttt-at.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇦🇺",
+      "server": "@Hiddify_Nexttt-au.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇧🇪",
+      "server": "@Hiddify_Nexttt-in.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇧🇬",
+      "server": "@Hiddify_Nexttt-bg.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇧🇷",
+      "server": "@Hiddify_Nexttt-br.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇨🇦",
+      "server": "@Hiddify_Nexttt-ca.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇨🇭",
+      "server": "@Hiddify_Nexttt-mc.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇨🇱",
+      "server": "@Hiddify_Nexttt-dk.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇲🇩",
+      "server": "@Hiddify_Nexttt-bo.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻🇭🇳",
+      "server": "193.9.32.3",
+      "server_port": 90,
+      "username": "79QQqCPBLgrFzen5tP9kzLVX",
+      "password": "NDbeMN6pQE5f3cuHmmmJrAfz",
+      "tls": {
+        "enabled": true,
+        "server_name": "ieee.org",
+        "insecure": true,
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻🇺🇸",
+      "server": "[::ffff:426f:3de9]",
+      "server_port": 89,
+      "username": "79QQqCPBLgrFzen5tP9kzLVX",
+      "password": "NDbeMN6pQE5f3cuHmmmJrAfz",
+      "tls": {
+        "enabled": true,
+        "server_name": "ieee.org",
+        "insecure": true,
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇨🇾",
+      "server": "92.112.126.34",
+      "server_port": 11002,
+      "uuid": "82af21a9-6a98-4da6-b951-72347b8e40d9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gallery.sourceforge.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "onYhi7WJAagIg9liEjsjDDdgpJQ5h-T8Z_lanR-kakQ",
+          "short_id": "f57645e2"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "host": "gallery.sourceforge.net",
+        "path": "/ws",
+        "headers": {
+          "Host": "gallery.sourceforge.net",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇨🇿",
+      "server": "85.93.8.142",
+      "server_port": 11002,
+      "uuid": "82af21a9-6a98-4da6-b951-72347b8e40d9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gallery.sourceforge.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cT2LpCh0dCr4jmoG6N2pDi8Pf8wxZZ4MFU-yDiVT_zI",
+          "short_id": "b535db"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "host": "gallery.sourceforge.net",
+        "path": "/ws",
+        "headers": {
+          "Host": "gallery.sourceforge.net",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇩🇪",
+      "server": "104.234.74.23",
+      "server_port": 11002,
+      "uuid": "3185f90f-f8eb-499b-b76c-6a27afaf970d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gallery.sourceforge.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "R_zZS27sEP3wbCa7qX7jV0CcLiv1sAL_i_snquX-MAA",
+          "short_id": "4f"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "host": "gallery.sourceforge.net",
+        "path": "/ws",
+        "headers": {
+          "Host": "gallery.sourceforge.net",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+        }
+      }
+    },
+
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇩🇰",
+      "server": "@Hiddify_Nexttt-om.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇺🇸",
+      "server": "@Hiddify_Nexttt-bb.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇪🇪",
+      "server": "@Hiddify_Nexttt-ee.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇪🇸",
+      "server": "@Hiddify_Nexttt-es.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇱🇺",
+      "server": "@Hiddify_Nexttt-vn.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇹🇷",
+      "server": "@Hiddify_Nexttt-tr.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇬🇪",
+      "server": "@Hiddify_Nexttt-af.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇬🇷",
+      "server": "@Hiddify_Nexttt-gr.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇭🇰",
+      "server": "@Hiddify_Nexttt-ro.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇭🇺",
+      "server": "@Hiddify_Nexttt-hu.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇸🇬",
+      "server": "@Hiddify_Nexttt-bh.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇬🇧",
+      "server": "@Hiddify_Nexttt-is.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "🇩🇰@Hiddify_Nexttt👈🏻🟡",
+      "server": "85.190.238.27",
+      "server_port": 89,
+      "username": "79QQqCPBLgrFzen5tP9kzLVX",
+      "password": "NDbeMN6pQE5f3cuHmmmJrAfz",
+      "tls": {
+        "enabled": true,
+        "server_name": "ieee.org",
+        "insecure": true,
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "🇫🇷@Hiddify_Nexttt👈🏻🟡",
+      "server": "185.81.125.67",
+      "server_port": 89,
+      "username": "79QQqCPBLgrFzen5tP9kzLVX",
+      "password": "NDbeMN6pQE5f3cuHmmmJrAfz",
+      "tls": {
+        "enabled": true,
+        "server_name": "ieee.org",
+        "insecure": true,
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇮🇹",
+      "server": "@Hiddify_Nexttt-lt.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇱🇹",
+      "server": "@Hiddify_Nexttt-bs.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇳🇱",
+      "server": "@Hiddify_Nexttt-ie.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇹🇩",
+      "server": "@Hiddify_Nexttt-rs.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt👈🏻تلگرام🇧🇭",
+      "server": "@Hiddify_Nexttt-ky.pointtoserver.com",
+      "server_port": 10799,
+      "username": "purevpn0s12300644",
+      "password": "ioqn613v",
+      "tls": {
+        "server_name": "ieee.org",
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+
+        {
+            "headers": {
+                "Host": [
+                    "stream.meet.google.com"
+                ]
+            },
+            "password": "79QQqCPBLgrFzen5tP9kzLVX",
+            "path": "",
+            "server": "194.233.96.24",
+            "server_port": 90,
+            "domain_strategy": "",
+            "tag": "@Hiddify_Nexttt-DE-3",
+            "tls": {
+                "alpn": [
+                    "h2,http/1.1"
+                ],
+                "disable_sni": false,
+                "enabled": true,
+                "insecure": true,
+                "server_name": "ieee.org"
+            },
+            "type": "http",
+            "username": "79QQqCPBLgrFzen5tP9kzLVX"
+        },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt-US-4",
+      "server": "85.190.232.156",
+      "server_port": 89,
+      "username": "79QQqCPBLgrFzen5tP9kzLVX",
+      "password": "NDbeMN6pQE5f3cuHmmmJrAfz",
+      "tls": {
+        "enabled": true,
+        "server_name": "ieee.org",
+        "insecure": true,
+        "alpn": "h2,http/1.1"
+      },
+      "headers": {
+        "Host": "stream.meet.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt-US-5",
+      "server": "50.114.206.151",
+      "server_port": 11001,
+      "username": "Babak-US-2",
+      "password": "q44tiTaJyf",
+      "headers": {
+        "Host": "google.com",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "@Hiddify_Nexttt-US-6",
+      "server": "50.114.206.150",
+      "server_port": 11001,
+      "username": "Babak-US-1",
+      "password": "yHFqYPbYgs",
+      "headers": {
+        "Host": "google.com",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+      }
+    },
+
+    {
+      "type": "direct",
+      "tag": "_direct"
+    },
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": "tun-in",
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "همراه اول",
+        "outbound": "همراهاول🔵"
+      },
+      {
+        "clash_mode": "ایرانسل",
+        "outbound": "ایرانسل🟡"
+      },
+      {
+        "network": "tcp",
+        "port": 853,
+        "action": "reject",
+        "method": "default"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "action": "reject",
+        "method": "default"
+      },
+      {
+        "inbound": "tun-in",
+        "action": "resolve"
+      },
+      {
+        "ip_cidr": "10.10.34.0/24",
+        "outbound": "@Hiddify_Nexttt👈🏻تلگرام"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "final": "@Hiddify_Nexttt👈🏻تلگرام",
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "default_mode": "@Hiddify_Nexttt👈🏻تلگرام",
+      "access_control_allow_origin": "https://yacd.metacubex.one",
+      "access_control_allow_private_network": true
+    }
+  }
+}
