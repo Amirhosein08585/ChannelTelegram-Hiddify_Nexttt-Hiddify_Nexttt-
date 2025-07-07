@@ -1,0 +1,1299 @@
+
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+        {
+        "tag": "default",
+        "address": "tls://8.8.8.8",
+        "detour": "Hiddify_Nexttt"
+      },
+      {
+        "tag": "local",
+        "address": "https://1.1.1.1/dns-query",
+        "detour": "Hiddify_Nexttt"
+      }
+    
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "local"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "default"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "local"
+      }
+    
+    ],
+    "final": "default",
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 20122,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": true
+    },
+    {
+      "type": "http",
+      "listen": "127.0.0.1",
+      "listen_port": 8181,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": true
+    },
+    {
+      "type": "socks",
+      "listen": "127.0.0.1",
+      "listen_port": 8080,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": true
+    },
+    {
+      "type": "tun",
+     "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": false,
+      "stack": "mixed",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 20122
+        }
+      },
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    }
+  ],
+  "outbounds": [
+{
+        "type": "selector",
+        "tag": "Hiddify_Nexttt آیدی کانال تلگرام 👈",
+        "outbounds": [
+          "انتخاب",
+          "انتخاب"
+        
+        
+        ],
+        "default" : "انتخاب",
+        "interrupt_exist_connections": true
+      },
+
+   {
+        "type": "selector",
+        "tag": "Hiddify_Nexttt",
+        "outbounds": [
+          "انتخاب",
+          "انتخاب"
+        
+        
+        ],
+        "default": "انتخاب",
+        "interrupt_exist_connections": true
+      },
+ {
+            "tag": "@Hiddify_Nexttt",
+            "type": "selector",
+            "interrupt_exist_connections": true,
+           
+            "outbounds": [
+
+  {
+
+  
+        "انتخاب",
+      "🎈 Auto",
+
+      "🇨🇦CANADA",
+
+      "🇨🇾CYPRUS",
+
+      "🇬🇪GEORGIA",
+
+      "🇧🇴BOLIVIA",
+
+      "🇩🇪GERMANY2",
+
+      "🇩🇪GERMANY",
+
+      "🇸🇪SWEDEN",
+
+      "🇭🇳HONDURAS",
+
+      "🇹🇼TAIWAN",
+
+      "🇮🇹ITALY",
+
+      "🇩🇰DENMARK",
+
+      "🇮🇳INDIA",
+
+      "🇺🇸UNITED STATES",
+
+      "🇱🇧LEBANON",
+
+      "🇵🇭PHILIPPINES",
+
+      "🇸🇬SINGAPORE",
+
+      "🇪🇪ESTONIA",
+
+      "🇺🇸UNITED STATES2",
+
+      "🇦🇪UAE",
+
+      "🇫🇷FRANCE",
+
+      "🇨🇦CANADA",
+
+      "🇨🇾CYPRUS",
+
+      "🇬🇪GEORGIA",
+
+      "🇧🇴BOLIVIA",
+
+      "🇭🇳HONDURAS",
+
+      "🇸🇪SWEDEN",
+
+      "🇩🇪GERMANY",
+
+      "🇩🇪GERMANY2",
+
+      "🇹🇼TAIWAN",
+
+      "🇮🇹ITALY",
+
+      "🇩🇰DENMARK",
+
+      "🇮🇳INDIA",
+
+      "🇸🇬SINGAPORE",
+
+      "🇵🇭PHILIPPINES",
+
+      "🇱🇧LEBANON",
+
+      "🇺🇸UNITED STATES",
+
+      "🇫🇷FRANCE",
+
+      "🇪🇪ESTONIA",
+
+      "🇺🇸UNITED STATES2",
+
+      "🇦🇪UAE"
+
+    ]
+
+  },
+
+  {
+
+    "tag": "انتخاب",
+
+    "type": "urltest",
+"url": "http://cp.cloudflare.com",
+"interval": "10m0s",
+
+    "outbounds": [
+
+      "🇨🇦CANADA",
+
+      "🇨🇾CYPRUS",
+
+      "🇬🇪GEORGIA",
+
+      "🇧🇴BOLIVIA",
+
+      "🇭🇳HONDURAS",
+
+      "🇸🇪SWEDEN",
+
+      "🇩🇪GERMANY",
+
+      "🇩🇪GERMANY2",
+
+      "🇹🇼TAIWAN",
+
+      "🇮🇹ITALY",
+
+      "🇩🇰DENMARK",
+
+      "🇮🇳INDIA",
+
+      "🇸🇬SINGAPORE",
+
+      "🇵🇭PHILIPPINES",
+
+      "🇱🇧LEBANON",
+
+      "🇺🇸UNITED STATES",
+
+      "🇫🇷FRANCE",
+
+      "🇪🇪ESTONIA",
+
+      "🇺🇸UNITED STATES2",
+
+      "🇦🇪UAE"
+
+    ],
+
+    "url": "https://www.gstatic.com/generate_204",
+
+    "interval": "300s",
+
+    "tolerance": 150
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "66.111.61.161",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇨🇦CANADA",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "[::ffff:c32f:c211]",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇨🇾CYPRUS",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "81.17.123.114",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇬🇪GEORGIA",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "[::ffff:2d86:bd03]",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇧🇴BOLIVIA",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "193.9.32.3",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇭🇳HONDURAS",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "[146.70.21.19]",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇸🇪SWEDEN",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "194.233.96.24",
+
+    "server_port": 90,
+
+    "domain_strategy": "",
+
+    "tag": "🇩🇪GERMANY",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "91.214.64.21",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇩🇪GERMANY2",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "94.156.205.67",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇹🇼TAIWAN",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "85.190.232.156",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇮🇹ITALY",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "85.190.238.27",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇩🇰DENMARK",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "81.17.122.232",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇮🇳INDIA",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "[::ffff:c0a6:f68c]",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇸🇬SINGAPORE",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "[::ffff:d461:4701]",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇵🇭PHILIPPINES",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "[::ffff:d461:4603]",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇱🇧LEBANON",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "[::ffff:426f:3de9]",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇺🇸UNITED STATES",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "gitlab.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "185.81.125.67",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇫🇷FRANCE",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "85.190.239.114",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇪🇪ESTONIA",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "185.202.220.128",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇺🇸UNITED STATES2",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+  {
+
+    "headers": {
+
+      "Host": [
+
+        "marilynmanson.link"
+
+      ]
+
+    },
+
+    "password": "mvgojzp3aSXrWgD9AfyeLWMN",
+
+    "path": "",
+
+    "server": "146.70.238.163",
+
+    "server_port": 89,
+
+    "domain_strategy": "",
+
+    "tag": "🇦🇪UAE",
+
+    "tls": {
+
+      "alpn": [
+
+        "h2,http/1.1"
+
+      ],
+
+      "disable_sni": false,
+
+      "enabled": true,
+
+      "insecure": true,
+
+      "server_name": "google.com"
+
+    },
+
+    "type": "http",
+
+    "username": "XWYvRVwmMgwTMhB2LVwAkWAW"
+
+  },
+
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": "tun-in",
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "Hiddify_Nexttt"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "network": "tcp",
+        "port": 853,
+        "action": "reject",
+        "method": "default"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "action": "reject",
+        "method": "default"
+      },
+      
+      {
+        "inbound": "tun-in",
+        "action": "resolve"
+      },
+      
+      {
+        "ip_cidr": "10.10.34.0/24",
+        "outbound": "Hiddify_Nexttt"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      
+    ],
+    "final": "Hiddify_Nexttt",
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
+  }
+}
