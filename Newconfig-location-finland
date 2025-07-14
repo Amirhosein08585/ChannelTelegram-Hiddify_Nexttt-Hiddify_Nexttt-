@@ -44,14 +44,14 @@
       "sky.rethinkdns.com": [
         "188.114.96.3",
         "188.114.97.3",
-        "2a06:98c1:3121::3",
-        "2a06:98c1:3120::3",
-        "104.17.147.22",
+        "2a06:98c1:3121::1",
+        "2a06:98c1:3120::1",
         "104.17.148.22",
+        "104.17.147.22",
         "188.114.96.3",
         "188.114.97.3",
-        "2a06:98c1:3120::3",
-        "2a06:98c1:3121::3"
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3"
       ]
     },
     "independent_cache": true
@@ -90,7 +90,9 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 § 0"
+        "@Hiddify_Nexttt کانال تلگرامی ما 🇫🇮 +1 § 0",
+        "@Hiddify_Nexttt کانال تلگرامی ما 🇫🇮 +2 § 1",
+        "@Hiddify_Nexttt کانال تلگرامی ما 🇫🇮 +3 § 2"
       ],
       "default": "auto"
     },
@@ -98,7 +100,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 § 0"
+        "@Hiddify_Nexttt کانال تلگرامی ما 🇫🇮 +1 § 0",
+        "@Hiddify_Nexttt کانال تلگرامی ما 🇫🇮 +2 § 1",
+        "@Hiddify_Nexttt کانال تلگرامی ما 🇫🇮 +3 § 2"
       ],
       "url": "http://connectivitycheck.gstatic.com/generate_204",
       "interval": "10m0s",
@@ -106,15 +110,56 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 § 0",
+      "tag": "@Hiddify_Nexttt کانال تلگرامی ما 🇫🇮 +1 § 0",
       "server": "65.109.208.147",
       "server_port": 30652,
-      "uuid": "7bb9c746-42f0-48ad-b404-1236f0c44042",
+      "uuid": "ae5c3071-2f6f-48de-b9b6-858dbd1788b5",
       "transport": {
         "type": "http",
         "host": "radar.arvancloud.ir",
         "path": "/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray",
         "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "@Hiddify_Nexttt کانال تلگرامی ما 🇫🇮 +2 § 1",
+      "server": "65.109.208.147",
+      "server_port": 11567,
+      "uuid": "2d934f09-215c-4407-bea8-0222c7d42386",
+      "transport": {
+        "type": "http",
+        "host": "khabarfarsi.com",
+        "path": "/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray",
+        "method": "GET"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "@Hiddify_Nexttt کانال تلگرامی ما 🇫🇮 +3 § 2",
+      "server": "65.109.208.147",
+      "server_port": 46980,
+      "uuid": "2f6062b4-47a8-4e7e-a45f-890bd05b7964",
+      "tls": {
+        "enabled": true,
+        "server_name": "tgju.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cLO22Vq2cIZoIKmLfvbNX5_PQi7G2QGY-XxzMFrGfRY",
+          "short_id": "6d58"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray/@BanV2ray",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
       },
       "packet_encoding": ""
     },
@@ -197,7 +242,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "EuaRPhJYu3Eq2bwS"
+      "secret": "SiFP1YNEswfnFa1U"
     }
   }
 }
