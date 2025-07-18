@@ -1,0 +1,1069 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "output": "",
+    "timestamp": false
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:20123",
+      "external_ui": "",
+      "external_ui_download_url": "",
+      "secret": "4f7a849decff576d169317a8047fbac2a2f0b29735e68d938d267989fdc7f4ca",
+      "default_mode": "rule",
+      "access_control_allow_origin": [
+        "*"
+      ],
+      "access_control_allow_private_network": false
+    },
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "cache_id": "",
+      "store_fakeip": true,
+      "store_rdrc": true,
+      "rdrc_timeout": "7d"
+    }
+  },
+  "inbounds": [
+{
+      "type": "tun",
+     "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": false,
+      "stack": "mixed",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 20122
+        }
+      },
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    },
+
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 20122,
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": false
+    },
+    {
+      "type": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "listen_port": 20120,
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": false
+    },
+    {
+      "type": "http",
+      "tag": "http-in",
+      "listen": "127.0.0.1",
+      "listen_port": 20121,
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": false
+    }
+  ],
+  "outbounds": [
+{
+        "type": "selector",
+        "tag": "@hiddify_nexttt کانال تلگرامی ما",
+        "outbounds": [
+          "انتخاب",
+          "انتخاب"
+        
+        
+        ],
+        "default": "انتخاب",
+        "interrupt_exist_connections": true
+      },
+
+   {
+        "type": "selector",
+        "tag": "hiddify",
+        "outbounds": [
+          "انتخاب",
+          "انتخاب"
+        
+        
+        ],
+        "default": "انتخاب",
+        "interrupt_exist_connections": true
+      },
+    {
+      "type": "selector",
+      "tag": "hiddify_nexttt",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+     
+        "انتخاب",
+        "direct",
+        "Hiddify 🇹🇷",
+        "Hiddify 🇫🇮",
+        "Hiddify 🇷🇴",
+        "Hiddify 🇫🇷",
+        "Hiddify 🇸🇪",
+        "Hiddify 🇦🇪",
+        "Hiddify 🇩🇿",
+        "Hiddify 🇦🇹",
+        "Hiddify 🇦🇺",
+        "Hiddify 🇧🇪",
+        "Hiddify 🇧🇬",
+        "Hiddify 🇧🇷",
+        "Hiddify 🇨🇦",
+        "Hiddify 🇨🇭",
+        "Hiddify 🇨🇱",
+        "Hiddify 🇲🇩",
+        "Hiddify 🇨🇾",
+        "Hiddify 🇨🇿",
+        "Hiddify 🇩🇪",
+        "Hiddify 🇩🇰",
+        "Hiddify 🇺🇸",
+        "Hiddify 🇪🇪",
+        "Hiddify 🇪🇸",
+        "Hiddify 🇱🇺",
+        "Hiddify 🇺🇦",
+        "Hiddify 🇬🇪",
+        "Hiddify 🇬🇷",
+        "Hiddify 🇭🇰",
+        "Hiddify 🇭🇺",
+        "Hiddify 🇸🇬",
+        "Hiddify 🇬🇧",
+        "Hiddify 🇮🇹",
+        "Hiddify 🇯🇵",
+        "Hiddify 🇱🇹",
+        "Hiddify 🇳🇱"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "انتخاب",
+      "url": "http://cp.cloudflare.com",
+      "interval": "3m",
+      "tolerance": 150,
+      "interrupt_exist_connections": true,
+      "outbounds": [
+
+        "Hiddify 🇹🇷",
+        "Hiddify 🇫🇮",
+        "Hiddify 🇷🇴",
+        "Hiddify 🇫🇷",
+        "Hiddify 🇸🇪",
+        "Hiddify 🇦🇪",
+        "Hiddify 🇩🇿",
+        "Hiddify 🇦🇹",
+        "Hiddify 🇦🇺",
+        "Hiddify 🇧🇪",
+        "Hiddify 🇧🇬",
+        "Hiddify 🇧🇷",
+        "Hiddify 🇨🇦",
+        "Hiddify 🇨🇭",
+        "Hiddify 🇨🇱",
+        "Hiddify 🇲🇩",
+        "Hiddify 🇨🇾",
+        "Hiddify 🇨🇿",
+        "Hiddify 🇩🇪",
+        "Hiddify 🇩🇰",
+        "Hiddify 🇺🇸",
+        "Hiddify 🇪🇪",
+        "Hiddify 🇪🇸",
+        "Hiddify 🇱🇺",
+        "Hiddify 🇺🇦",
+        "Hiddify 🇬🇪",
+        "Hiddify 🇬🇷",
+        "Hiddify 🇭🇰",
+        "Hiddify 🇭🇺",
+        "Hiddify 🇸🇬",
+        "Hiddify 🇬🇧",
+        "Hiddify 🇮🇹",
+        "Hiddify 🇯🇵",
+        "Hiddify 🇱🇹",
+        "Hiddify 🇳🇱"
+      ]
+    },
+    
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-tr.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇹🇷",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-fi.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇫🇮",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-ro.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇷🇴",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-fr.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇫🇷",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-se.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇸🇪",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-ae.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇦🇪",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-al.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇩🇿",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-at.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇦🇹",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s10104588"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-au.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇦🇺",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-be.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇧🇪",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-bg.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇧🇬",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-br.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇧🇷",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-ca.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇨🇦",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-ch.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇨🇭",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-cl.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇨🇱",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-cr.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇲🇩",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-cy.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇨🇾",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-cz.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇨🇿",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-de.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇩🇪",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-dk.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇩🇰",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-dy.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇺🇸",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-ee.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇪🇪",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-es.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇪🇸",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-vn.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇱🇺",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-ua.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇺🇦",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-ge.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇬🇪",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-gr.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇬🇷",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-hk.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇭🇰",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-hu.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇭🇺",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-in.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇸🇬",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-is.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇬🇧",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-it.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇮🇹",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-jp.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇯🇵",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-lt.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇱🇹",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    },
+    {
+      "headers": {
+        "Host": [
+          "stream.meet.google.com"
+        ]
+      },
+      "password": "dUsOF552ZXVAWD",
+      "path": "",
+      "server": "prox-nl.pointtoserver.com",
+      "server_port": 10780,
+      "domain_strategy": "",
+      "tag": "Hiddify 🇳🇱",
+      "tls": {
+        "alpn": [
+          "h2,http/1.1"
+        ],
+        "disable_sni": false,
+        "enabled": false,
+        "server_name": "ieee.org"
+      },
+      "type": "http",
+      "username": "purevpn0s14187318"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "hijack-dns",
+        "protocol": "dns"
+      },
+      {
+        "action": "reject",
+        "protocol": "quic"
+      }
+    ],
+    "rule_set": [],
+    "auto_detect_interface": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "Local-DNS",
+        "address": "https://1.1.1.1:443/dns-query",
+        "address_resolver": "Local-DNS-Resolver",
+        "strategy": "prefer_ipv4",
+        "detour": "انتخاب"
+      },
+      {
+        "tag": "Local-DNS-Resolver",
+        "address": "local",
+        "address_resolver": "Local-DNS-Resolver",
+        "strategy": "prefer_ipv4",
+        "detour": "انتخاب"
+      },
+      {
+        "tag": "Remote-DNS",
+        "address": "tcp://8.8.8.8",
+        "address_resolver": "Local-DNS-Resolver",
+        "detour": "انتخاب"
+      },
+      {
+          "tag": "dns_block",
+          "address": "rcode://success"
+        }
+    ],
+
+   "rules": [
+      
+{
+          "outbound": "any",
+          "server": "Local-DNS-Resolver"
+        }
+      
+    ],
+    "disable_cache": false,
+    "disable_expire": false,
+    "independent_cache": true,
+    "final": "Remote-DNS"
+    },
+    "ntp": {
+      "enabled": true,
+      "server": "ir.pool.ntp.org",
+      "server_port": 123,
+      "detour": "direct"
+    }
+}
