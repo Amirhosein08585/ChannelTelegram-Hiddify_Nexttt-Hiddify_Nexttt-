@@ -1,0 +1,790 @@
+{
+    "log": {
+      "level": "warn",
+      "timestamp": true
+    },
+    "dns": {
+      "servers": [
+        {
+          "tag": "dns_proxy",
+          "address": "tcp://8.8.8.8",
+          "address_resolver": "dns_direct",
+          "strategy": "prefer_ipv4",
+          "detour": "hiddify"
+        },
+        {
+          "tag": "dns_proxy_ipv4",
+          "address": "tcp://8.8.8.8",
+          "address_resolver": "dns_direct",
+          "strategy": "ipv4_only",
+          "detour": "hiddify"
+        },
+        {
+          "tag": "dns_direct",
+          "address": "local",
+          "strategy": "prefer_ipv4",
+          "detour": "hiddify"
+        },
+        {
+          "tag": "dns_block",
+          "address": "rcode://success"
+        }
+      ],
+      "rules": [
+        {
+          "outbound": "any",
+          "server": "dns_direct"
+        }
+        
+        
+      ],
+      "final": "dns_proxy",
+      "independent_cache": true
+    },
+    "ntp": {
+      "enabled": true,
+      "server": "ir.pool.ntp.org",
+      "server_port": 123,
+      "detour": "direct"
+    },
+    "inbounds": [
+      {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 20122,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": true
+    },
+    {
+      "type": "http",
+      "listen": "127.0.0.1",
+      "listen_port": 8181,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": true
+    },
+    {
+      "type": "socks",
+      "listen": "127.0.0.1",
+      "listen_port": 8080,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": true
+    },
+    {
+      "type": "tun",
+     "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": false,
+      "stack": "mixed",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 20122
+        }
+      },
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "ipv4_only"
+    }
+  
+    ],
+  "outbounds": [
+{
+        "type": "selector",
+        "tag": "@Hiddify_Nexttt کانال تلگرامی ما",
+        "outbounds": [
+          "انتخاب",
+          "انتخاب"
+        
+        
+        ],
+        "default": "انتخاب",
+        "interrupt_exist_connections": true
+      },
+
+   {
+        "type": "selector",
+        "tag": "Hiddify_Nexttt",
+        "outbounds": [
+          "انتخاب",
+          "انتخاب"
+        
+        
+        ],
+        "default": "انتخاب",
+        "interrupt_exist_connections": true
+      },
+        
+        
+   {
+            "tag": "hiddify",
+            "type": "selector",
+            "outbounds": [
+                "انتخاب",
+        "Hiddify-Sweden",
+        "Hiddify-Germany",
+        "Hiddify-Swiss",
+        "Hiddify-Slovakia",
+        "Hiddify-Netherlands",
+        "Hiddify-iranramona",
+        "Hiddify-Belgium",
+        "Hiddify-Italy",
+        "Hiddify-UK-Man",
+        "Hiddify-Romania",
+        "Hiddify-Moldova",
+        "Hiddify-Canada",
+        "Hiddify-Norway",
+        "Hiddify-Miami",
+        "Hiddify-LosAngeles",
+        "Hiddify-UAE",
+        "Hiddify-Singapore",
+        "Hiddify-Phoenix",
+        "Hiddify-Austria",
+        "Hiddify-HongKong",
+        "Hiddify-Turkey"
+            
+         
+
+
+            ]
+        },
+  
+{
+            "tag": "انتخاب",
+            "type": "urltest",
+            "outbounds": [
+         
+        "Hiddify-Sweden",
+        "Hiddify-Germany",
+        "Hiddify-Swiss",
+        "Hiddify-Slovakia",
+        "Hiddify-Netherlands",
+        "Hiddify-iranramona",
+        "Hiddify-Belgium",
+        "Hiddify-Italy",
+        "Hiddify-UK-Man",
+        "Hiddify-Romania",
+        "Hiddify-Moldova",
+        "Hiddify-Canada",
+        "Hiddify-Norway",
+        "Hiddify-Miami",
+        "Hiddify-LosAngeles",
+        "Hiddify-UAE",
+        "Hiddify-Singapore",
+        "Hiddify-Phoenix",
+        "Hiddify-Austria",
+        "Hiddify-HongKong",
+        "Hiddify-Turkey"
+           
+ 
+
+                
+              
+                
+      ],
+      "url": "http://cp.cloudflare.com",
+      "interval": "5m",
+      "tolerance": 50
+    },
+   
+           
+        
+       
+
+    {
+      "tag": "Hiddify-Sweden",
+      "type": "vless",
+      "server": "damp-cherry-4620.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "damp-cherry-4620.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "damp-cherry-4620.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Germany",
+      "type": "vless",
+      "server": "wild-resonance-23be.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "wild-resonance-23be.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "wild-resonance-23be.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Swiss",
+      "type": "vless",
+      "server": "square-shape-a8b4.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "square-shape-a8b4.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "square-shape-a8b4.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Slovakia",
+      "type": "vless",
+      "server": "soft-water-83f3.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "soft-water-83f3.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "soft-water-83f3.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Netherlands",
+      "type": "vless",
+      "server": "shiny-unit-654d.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "shiny-unit-654d.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "shiny-unit-654d.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-iranramona",
+      "type": "vless",
+      "server": "shiny-unit-654d.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "shiny-unit-654d.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "shiny-unit-654d.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Belgium",
+      "type": "trojan",
+      "server": "muddy-frost-4e2d.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "password": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "tls": {
+        "enabled": true,
+        "server_name": "muddy-frost-4e2d.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "muddy-frost-4e2d.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Italy",
+      "type": "vless",
+      "server": "lingering-boat-0b47.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "lingering-boat-0b47.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "lingering-boat-0b47.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-UK-Man",
+      "type": "vless",
+      "server": "snowy-cloud-192b.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "snowy-cloud-192b.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "snowy-cloud-192b.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Romania",
+      "type": "vless",
+      "server": "snowy-mountain-d4be.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "snowy-mountain-d4be.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "snowy-mountain-d4be.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Moldova",
+      "type": "trojan",
+      "server": "dry-snowflake-b29f.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "password": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "tls": {
+        "enabled": true,
+        "server_name": "dry-snowflake-b29f.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "dry-snowflake-b29f.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Canada",
+      "type": "vless",
+      "server": "misty-star-5588.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "misty-star-5588.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "misty-star-5588.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Norway",
+      "type": "vless",
+      "server": "damp-morning-6562.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "damp-morning-6562.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "damp-morning-6562.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Miami",
+      "type": "vless",
+      "server": "broken-scene-ce1a.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "broken-scene-ce1a.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "broken-scene-ce1a.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-LosAngeles",
+      "type": "vless",
+      "server": "solitary-forest-ad02.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "solitary-forest-ad02.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "solitary-forest-ad02.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-UAE",
+      "type": "vless",
+      "server": "little-fog-1c2f.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "little-fog-1c2f.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "little-fog-1c2f.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Singapore",
+      "type": "trojan",
+      "server": "lingering-fire-1fe9.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "password": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "tls": {
+        "enabled": true,
+        "server_name": "lingering-fire-1fe9.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "lingering-fire-1fe9.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Phoenix",
+      "type": "vless",
+      "server": "falling-mud-d0e2.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "falling-mud-d0e2.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "falling-mud-d0e2.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Austria",
+      "type": "vless",
+      "server": "ancient-haze-d203.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ancient-haze-d203.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "ancient-haze-d203.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-HongKong",
+      "type": "vless",
+      "server": "quiet-wind-f608.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "quiet-wind-f608.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "quiet-wind-f608.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "Hiddify-Turkey",
+      "type": "vless",
+      "server": "still-bar-5702.vpnetwork3567.workers.dev",
+      "server_port": 443,
+      "uuid": "0EBCBB23-C337-0909-4655-BC85BCDCFC02",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "still-bar-5702.vpnetwork3567.workers.dev",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "still-bar-5702.vpnetwork3567.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": "tun-in",
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "hiddify"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "network": "tcp",
+        "port": 853,
+        "action": "reject",
+        "method": "default"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "action": "reject",
+        "method": "default"
+      },
+      
+      {
+        "inbound": "tun-in",
+        "action": "resolve"
+      },
+      
+      {
+        "ip_cidr": "10.10.34.0/24",
+        "outbound": "hiddify"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      
+    ],
+    "final": "hiddify",
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
+  }
+}
